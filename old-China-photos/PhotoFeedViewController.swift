@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import CoreData
 
-class FirstViewController: UIViewController {
+class PhotoFeedViewController: UIViewController {
+    
+    var managedObjectContext: NSManagedObjectContext!
 
     override func viewDidLoad() {
         super.viewDidLoad()

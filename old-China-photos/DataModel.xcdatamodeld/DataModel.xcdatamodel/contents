@@ -7,8 +7,8 @@
         <attribute name="department" attributeType="String" syncable="YES"/>
         <attribute name="dimensions" attributeType="String" syncable="YES"/>
         <attribute name="imageThumbURI" attributeType="String" syncable="YES"/>
-        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="latitude" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="longitude" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="makerName" attributeType="String" syncable="YES"/>
         <attribute name="medium" attributeType="String" syncable="YES"/>
         <attribute name="objectNumber" attributeType="String" syncable="YES"/>

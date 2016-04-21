@@ -56,6 +56,9 @@
 		4B368BF91CC86C3700978B13 /* old-China-photos */ = {
 			isa = PBXGroup;
 			children = (
+				4B368C101CC86F3200978B13 /* Model */,
+				4B368C0F1CC86F2D00978B13 /* View */,
+				4B368C0E1CC86F2600978B13 /* Controller */,
 				4B368BFA1CC86C3700978B13 /* AppDelegate.swift */,
 				4B368BFC1CC86C3700978B13 /* FirstViewController.swift */,
 				4B368BFE1CC86C3700978B13 /* SecondViewController.swift */,
@@ -65,6 +68,27 @@
 				4B368C081CC86C3700978B13 /* Info.plist */,
 			);
 			path = "old-China-photos";
+			sourceTree = "<group>";
+		};
+		4B368C0E1CC86F2600978B13 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		4B368C0F1CC86F2D00978B13 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		4B368C101CC86F3200978B13 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +284,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.crossroads.old-China-photos";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -271,6 +296,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.crossroads.old-China-photos";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

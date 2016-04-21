@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Photo Feed Table View Controller-->
+        <!--Records-->
         <scene sceneID="aSu-Wv-pmS">
             <objects>
                 <tableViewController id="j32-PR-S1z" customClass="PhotoFeedTableViewController" customModule="old_China_photos" customModuleProvider="target" sceneMemberID="viewController">
@@ -14,7 +14,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecordCell" rowHeight="57" id="5aN-5O-7JA">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecordCell" rowHeight="57" id="5aN-5O-7JA" customClass="RecordCell" customModule="old_China_photos" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="57"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5aN-5O-7JA" id="1cM-8F-0OB">
@@ -35,6 +35,10 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="makerNameLabel" destination="s5j-KF-0h7" id="XrT-1l-ciS"/>
+                                    <outlet property="primaryTitleLabel" destination="CU0-dI-bop" id="UBo-7m-Auu"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -42,7 +46,7 @@
                             <outlet property="delegate" destination="j32-PR-S1z" id="p3U-HL-Dqf"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="2uQ-LJ-myX"/>
+                    <navigationItem key="navigationItem" title="Records" id="2uQ-LJ-myX"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8hO-Ba-xcr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

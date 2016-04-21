@@ -42,14 +42,10 @@ class PhotoFeedTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("RecordCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("RecordCell", forIndexPath: indexPath) as! RecordCell
         let record = records[indexPath.row]
         
-        let primaryTitleLabel = cell.viewWithTag(100) as! UILabel
-        primaryTitleLabel.text = record.primaryTitle
-        
-        let makerLabel = cell.viewWithTag(101) as! UILabel
-        makerLabel.text = record.makerName
+        cell.configureForRecrod(record)
         
         return cell
     }

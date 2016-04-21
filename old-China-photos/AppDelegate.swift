@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
@@ -20,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let tabBarController = window!.rootViewController as! UITabBarController
         if let tabBarControllers = tabBarController.viewControllers {
             let navigationController = tabBarControllers[0] as! UINavigationController
-            let photoFeedViewController = navigationController.viewControllers[0] as! PhotoFeedViewController
+            let photoFeedViewController = navigationController.viewControllers[0] as! PhotoFeedTableViewController
             photoFeedViewController.managedObjectContext = managedObjectContext
         }
         

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4B368BFB1CC86C3700978B13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B368BFA1CC86C3700978B13 /* AppDelegate.swift */; };
-		4B368BFD1CC86C3700978B13 /* PhotoFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B368BFC1CC86C3700978B13 /* PhotoFeedViewController.swift */; };
+		4B368BFD1CC86C3700978B13 /* PhotoFeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B368BFC1CC86C3700978B13 /* PhotoFeedTableViewController.swift */; };
 		4B368BFF1CC86C3700978B13 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B368BFE1CC86C3700978B13 /* SecondViewController.swift */; };
 		4B368C021CC86C3700978B13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B368C001CC86C3700978B13 /* Main.storyboard */; };
 		4B368C041CC86C3700978B13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B368C031CC86C3700978B13 /* Assets.xcassets */; };
@@ -22,7 +22,7 @@
 /* Begin PBXFileReference section */
 		4B368BF71CC86C3700978B13 /* old-China-photos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "old-China-photos.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B368BFA1CC86C3700978B13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4B368BFC1CC86C3700978B13 /* PhotoFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFeedViewController.swift; sourceTree = "<group>"; };
+		4B368BFC1CC86C3700978B13 /* PhotoFeedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFeedTableViewController.swift; sourceTree = "<group>"; };
 		4B368BFE1CC86C3700978B13 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		4B368C011CC86C3700978B13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4B368C031CC86C3700978B13 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -68,7 +68,7 @@
 				4B368C0F1CC86F2D00978B13 /* View */,
 				4B368C0E1CC86F2600978B13 /* Controller */,
 				4B368BFA1CC86C3700978B13 /* AppDelegate.swift */,
-				4B368BFC1CC86C3700978B13 /* PhotoFeedViewController.swift */,
+				4B368BFC1CC86C3700978B13 /* PhotoFeedTableViewController.swift */,
 				4B368BFE1CC86C3700978B13 /* SecondViewController.swift */,
 				4B368C001CC86C3700978B13 /* Main.storyboard */,
 				4B368C031CC86C3700978B13 /* Assets.xcassets */,
@@ -181,7 +181,7 @@
 				4B368C171CC871FA00978B13 /* Record.swift in Sources */,
 				4B368C131CC86F8700978B13 /* DataModel.xcdatamodeld in Sources */,
 				4B368BFB1CC86C3700978B13 /* AppDelegate.swift in Sources */,
-				4B368BFD1CC86C3700978B13 /* PhotoFeedViewController.swift in Sources */,
+				4B368BFD1CC86C3700978B13 /* PhotoFeedTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

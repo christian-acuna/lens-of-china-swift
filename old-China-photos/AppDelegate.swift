@@ -73,6 +73,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             //6
             let context = NSManagedObjectContext(concurrencyType: .MainQueueConcurrencyType)
             context.persistentStoreCoordinator = coordinator
+            //print(storeURL)
             return context
             //7
         } catch {

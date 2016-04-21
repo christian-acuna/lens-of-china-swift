@@ -30,5 +30,6 @@ extension Record {
     @NSManaged var culture: String
     @NSManaged var imageThumbURI: String
     @NSManaged var recordLink: String
+    @NSManaged var recordID: String
 
 }

@@ -23,6 +23,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let photoFeedViewController = navigationController.viewControllers[0] as! PhotoFeedViewController
             photoFeedViewController.managedObjectContext = managedObjectContext
         }
+        
+        preloadData()
+
         return true
     }
     
@@ -73,7 +76,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             //6
             let context = NSManagedObjectContext(concurrencyType: .MainQueueConcurrencyType)
             context.persistentStoreCoordinator = coordinator
-            //print(storeURL)
+            print(storeURL)
             return context
             //7
         } catch {
@@ -82,9 +85,129 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     
+    // MARK: - CSV Parser Methods
     
+    func parseCSV (contentsOfURL: NSURL, encoding: NSStringEncoding) -> [(recordID:String, primaryTitle:String, makerName: String, type: String,
+        medium: String, place: String, date: String, source: String, creditLine: String, objectNumber: String, department: String, dimensions: String,
+        culture: String, imageThumbURI: String, recordLink: String, latitude: String, longitude: String)]? {
+        
+        // Load the CSV file and parse it
+        //recordID,PrimaryTitle,MakerName,Type,Medium,Place,Date,Source,CreditLine,ObjectNumber,Department,Dimensions,Culture,imageThumbURI,recordLink
+        let delimiter = ","
+        var items:[(recordID:String, primaryTitle:String, makerName: String, type: String,
+        medium: String, place: String, date: String, source: String, creditLine: String, objectNumber: String, department: String, dimensions: String,
+            culture: String, imageThumbURI: String, recordLink: String, latitude: String, longitude: String)]?
+        
+        do {
+            let content = try String(contentsOfURL: contentsOfURL, encoding: encoding)
+            print(content)
+            items = []
+            let lines:[String] = content.componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet()) as [String]
+            
+            for line in lines {
+                var values:[String] = []
+                if line != "" {
+                    // For a line with double quotes
+                    // we use NSScanner to perform the parsing
+                    if line.rangeOfString("\"") != nil {
+                        var textToScan:String = line
+                        var value:NSString?
+                        var textScanner:NSScanner = NSScanner(string: textToScan)
+                        while textScanner.string != "" {
+                            
+                            if (textScanner.string as NSString).substringToIndex(1) == "\"" {
+                                textScanner.scanLocation += 1
+                                textScanner.scanUpToString("\"", intoString: &value)
+                                textScanner.scanLocation += 1
+                            } else {
+                                textScanner.scanUpToString(delimiter, intoString: &value)
+                            }
+                            
+                            // Store the value into the values array
+                            values.append(value as! String)
+                            
+                            // Retrieve the unscanned remainder of the string
+                            if textScanner.scanLocation < textScanner.string.characters.count {
+                                textToScan = (textScanner.string as NSString).substringFromIndex(textScanner.scanLocation + 1)
+                            } else {
+                                textToScan = ""
+                            }
+                            textScanner = NSScanner(string: textToScan)
+                        }
+                        
+                        // For a line without double quotes, we can simply separate the string
+                        // by using the delimiter (e.g. comma)
+                    } else  {
+                        values = line.componentsSeparatedByString(delimiter)
+                    }
+                    
+                    // Put the values into the tuple and add it to the items array
+//                    let item = (name: values[0], detail: values[1], price: values[2])
+                    let item = (recordID: values[0], primaryTitle: values[1], makerName: values[2], type: values[3],
+                        medium: values[4], place: values[5], date: values[6], source: values[7], creditLine: values[8], objectNumber: values[9], department: values[10], dimensions: values[11],
+                        culture: values[12], imageThumbURI: values[13], recordLink: values[14], latitude: values[15], longitude: values[16])
+                    items?.append(item)
+                }
+            }
+            
+        } catch {
+            print(error)
+        }
+        
+        return items
+    }
+
+    func preloadData() {
+        guard let contentsOfURL = NSBundle.mainBundle().URLForResource("record", withExtension: "csv") else {
+            return
+        }
+        
+        removeData()
+        if let items = parseCSV(contentsOfURL, encoding: NSUTF8StringEncoding) {
+            //Preload the menu items
+            for item in items {
+                let recordItem = NSEntityDescription.insertNewObjectForEntityForName("Record", inManagedObjectContext: managedObjectContext) as! Record
+                recordItem.recordID = item.recordID
+                recordItem.primaryTitle = item.primaryTitle
+                recordItem.makerName = item.makerName
+                recordItem.type = item.type
+                recordItem.medium = item.medium
+                recordItem.place = item.place
+                recordItem.date = item.date
+                recordItem.source = item.source
+                recordItem.creditLine = item.creditLine
+                recordItem.objectNumber = item.objectNumber
+                recordItem.department = item.department
+                recordItem.dimensions = item.dimensions
+                recordItem.culture = item.culture
+                recordItem.imageThumbURI = item.imageThumbURI
+                recordItem.recordLink = item.recordLink
+                recordItem.latitude = (item.latitude as NSString).doubleValue
+                recordItem.longitude = (item.longitude as NSString).doubleValue
+                
+                do {
+                    try managedObjectContext.save()
+                } catch {
+                    print(error)
+                }
+            }
+            
+        }
+    }
     
-    
-    
+    func removeData() {
+        let fetchRequest = NSFetchRequest(entityName: "Record")
+        
+        do {
+            let recordItems = try managedObjectContext.executeFetchRequest(fetchRequest) as! [Record]
+            for recordItem in recordItems {
+                managedObjectContext.deleteObject(recordItem)
+            }
+        } catch {
+            print(error)
+        }
+        
+    }
 }
+
 

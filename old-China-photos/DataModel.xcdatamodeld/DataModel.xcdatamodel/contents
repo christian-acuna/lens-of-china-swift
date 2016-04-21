@@ -14,11 +14,12 @@
         <attribute name="objectNumber" attributeType="String" syncable="YES"/>
         <attribute name="place" attributeType="String" syncable="YES"/>
         <attribute name="primaryTitle" attributeType="String" syncable="YES"/>
+        <attribute name="recordID" attributeType="String" syncable="YES"/>
         <attribute name="recordLink" attributeType="String" syncable="YES"/>
         <attribute name="source" attributeType="String" syncable="YES"/>
         <attribute name="type" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Record" positionX="-63" positionY="-18" width="128" height="285"/>
+        <element name="Record" positionX="-63" positionY="-18" width="128" height="300"/>
     </elements>
 </model>

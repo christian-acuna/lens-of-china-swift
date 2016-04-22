@@ -30,8 +30,6 @@ class RecordCell: UITableViewCell {
         mediumLabel.text = nil
         placeLabel.text = nil
         imageThumb.image = nil
-        
-        
     }
 
     override func awakeFromNib() {
@@ -51,9 +49,15 @@ class RecordCell: UITableViewCell {
         typeLabel.text = record.type
         mediumLabel.text = record.medium
         placeLabel.text = record.place
-        if let url = NSURL(string: record.imageThumbURI) {
-            downloadTask = imageThumb.loadImageWithURL(url)
+        
+        let url = NSURL(string: record.imageThumbURI)
+        if let imageName = url?.pathComponents?.last, image = UIImage(named: imageName) {
+                imageThumb.image = image
         }
+        
+//        if let url = NSURL(string: record.imageThumbURI) {
+//            downloadTask = imageThumb.loadImageWithURL(url)
+//        }
     }
 
 }

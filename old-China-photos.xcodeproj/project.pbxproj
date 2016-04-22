@@ -18,6 +18,7 @@
 		4B368C171CC871FA00978B13 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B368C151CC871FA00978B13 /* Record.swift */; };
 		4B3E83C41CC89FB400053278 /* record.csv in Resources */ = {isa = PBXBuildFile; fileRef = 4B3E83C31CC89FB400053278 /* record.csv */; };
 		4B3E83C61CC8B08B00053278 /* RecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3E83C51CC8B08B00053278 /* RecordCell.swift */; };
+		4B3E83C81CC8B75800053278 /* UIImageView+DownloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3E83C71CC8B75800053278 /* UIImageView+DownloadImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		4B368C151CC871FA00978B13 /* Record.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Record.swift; path = ../Record.swift; sourceTree = "<group>"; };
 		4B3E83C31CC89FB400053278 /* record.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = record.csv; path = ../record.csv; sourceTree = "<group>"; };
 		4B3E83C51CC8B08B00053278 /* RecordCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordCell.swift; sourceTree = "<group>"; };
+		4B3E83C71CC8B75800053278 /* UIImageView+DownloadImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+DownloadImage.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				4B3E83C51CC8B08B00053278 /* RecordCell.swift */,
+				4B3E83C71CC8B75800053278 /* UIImageView+DownloadImage.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 				4B368BFF1CC86C3700978B13 /* SecondViewController.swift in Sources */,
 				4B368C171CC871FA00978B13 /* Record.swift in Sources */,
 				4B3E83C61CC8B08B00053278 /* RecordCell.swift in Sources */,
+				4B3E83C81CC8B75800053278 /* UIImageView+DownloadImage.swift in Sources */,
 				4B368C131CC86F8700978B13 /* DataModel.xcdatamodeld in Sources */,
 				4B368BFB1CC86C3700978B13 /* AppDelegate.swift in Sources */,
 				4B368BFD1CC86C3700978B13 /* PhotoFeedTableViewController.swift in Sources */,

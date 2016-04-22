@@ -23,6 +23,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let navigationController = tabBarControllers[0] as! UINavigationController
             let photoFeedViewController = navigationController.viewControllers[0] as! PhotoFeedTableViewController
             photoFeedViewController.managedObjectContext = managedObjectContext
+            
+            let navigationController2 = tabBarControllers[1] as! UINavigationController
+            let recordCollectionViewController = navigationController2.viewControllers[0] as! RecordCollectionViewController
+            recordCollectionViewController.managedObjectContext = managedObjectContext
         }
         
         preloadData()

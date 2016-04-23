@@ -95,22 +95,17 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="hU1-nf-67i">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="oBE-q4-Fhs">
-                            <size key="itemSize" width="200" height="200"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
+                        <collectionViewLayout key="collectionViewLayout" id="jqo-tM-a7y" customClass="RecordLayout" customModule="old_China_photos" customModuleProvider="target"/>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="ihI-rS-cwm" customClass="RecordCollectionViewCell" customModule="old_China_photos" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="64" width="200" height="200"/>
+                                <rect key="frame" x="0.0" y="64" width="198" height="198"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="198" height="198"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0gj-lD-b0u">
-                                            <rect key="frame" x="2" y="2" width="196" height="196"/>
+                                            <rect key="frame" x="2" y="2" width="194" height="194"/>
                                         </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -121,6 +116,7 @@
                                     <constraint firstAttribute="bottom" secondItem="0gj-lD-b0u" secondAttribute="bottom" constant="2" id="Xy9-zK-Z2P"/>
                                     <constraint firstAttribute="trailing" secondItem="0gj-lD-b0u" secondAttribute="trailing" constant="2" id="eBg-SF-pUI"/>
                                 </constraints>
+                                <size key="customSize" width="198" height="198"/>
                                 <connections>
                                     <outlet property="recordImageView" destination="0gj-lD-b0u" id="hYf-ZA-8mS"/>
                                 </connections>

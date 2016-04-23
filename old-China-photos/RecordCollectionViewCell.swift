@@ -14,10 +14,8 @@ class RecordCollectionViewCell: UICollectionViewCell {
     
     func configureCollectionForRecrod(record: Record) {
         
-        let url = NSURL(string: record.imageThumbURI)
-        if let imageName = url?.pathComponents?.last, image = UIImage(named: imageName) {
-            recordImageView.image = image
-        }
+        let image = UIImage(named: record.imageThumbURI)
+        recordImageView.image = image
         
         //        if let url = NSURL(string: record.imageThumbURI) {
         //            downloadTask = imageThumb.loadImageWithURL(url)

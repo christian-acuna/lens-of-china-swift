@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import AVFoundation
 
 class RecordCollectionViewController: UICollectionViewController {
     
@@ -32,25 +33,19 @@ class RecordCollectionViewController: UICollectionViewController {
             print(error)
         }
         
-        let width = CGRectGetWidth(collectionView!.frame) / 3
-        let layout = collectionViewLayout as! UICollectionViewFlowLayout
-        layout.itemSize = CGSize(width: width, height: width)
+        let size = CGRectGetWidth(collectionView!.bounds) / 2
+        collectionView!.contentInset = UIEdgeInsets(top: 23, left: 5, bottom: 10, right: 5)
+        
+        let layout = collectionViewLayout as! RecordLayout
+        layout.delegate = self
+        layout.numberOfColumns = 2
+        layout.cellPadding = 5
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
 
     // MARK: UICollectionViewDataSource
 
@@ -67,7 +62,7 @@ class RecordCollectionViewController: UICollectionViewController {
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! RecordCollectionViewCell
-        let record = records[indexPath.row]
+        let record = records[indexPath.item]
     
         cell.configureCollectionForRecrod(record)
     
@@ -84,5 +79,19 @@ class RecordCollectionViewController: UICollectionViewController {
             let detailRecordViewController = segue.destinationViewController as! DetailRecordViewController
             detailRecordViewController.record = sender as? Record
         }
+    }
+}
+
+extension RecordCollectionViewController: RecordLayoutDelegate {
+    func collectionView(collectionView: UICollectionView, heightForPhotoAtIndexPath indexPath: NSIndexPath, withWidth width: CGFloat) -> CGFloat {
+        let photoRecord = records[indexPath.item]
+        let photo = UIImage(named: photoRecord.imageThumbURI)!
+        let boundingRect = CGRect(x: 0, y: 0, width: width, height: CGFloat(MAXFLOAT))
+        let rect = AVMakeRectWithAspectRatioInsideRect(photo.size, boundingRect)
+        return rect.height
+    }
+    
+    func collectionView(collectionView: UICollectionView, heightForAnnotationAtIndexPath indexPath: NSIndexPath, withWidth width: CGFloat) -> CGFloat {
+        return 60
     }
 }

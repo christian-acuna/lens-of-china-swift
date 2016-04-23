@@ -98,27 +98,60 @@
                         <collectionViewLayout key="collectionViewLayout" id="jqo-tM-a7y" customClass="RecordLayout" customModule="old_China_photos" customModuleProvider="target"/>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="ihI-rS-cwm" customClass="RecordCollectionViewCell" customModule="old_China_photos" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="64" width="198" height="198"/>
+                                <rect key="frame" x="0.0" y="64" width="200" height="260"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="198" height="198"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="200" height="260"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0gj-lD-b0u">
-                                            <rect key="frame" x="2" y="2" width="194" height="194"/>
-                                        </imageView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JdQ-kE-cff" customClass="RoundedCornersView" customModule="old_China_photos" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="260"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yBi-FU-CeY">
+                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="200" id="uPp-92-MSw"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Caption" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o7u-8u-sSC">
+                                                    <rect key="frame" x="4" y="204" width="192" height="48"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="48" id="B0C-4a-OeA"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="yBi-FU-CeY" firstAttribute="top" secondItem="JdQ-kE-cff" secondAttribute="top" id="3L4-od-vgu"/>
+                                                <constraint firstItem="yBi-FU-CeY" firstAttribute="leading" secondItem="JdQ-kE-cff" secondAttribute="leading" id="MlJ-2r-0al"/>
+                                                <constraint firstAttribute="trailing" secondItem="yBi-FU-CeY" secondAttribute="trailing" id="lfJ-li-uBL"/>
+                                                <constraint firstItem="o7u-8u-sSC" firstAttribute="leading" secondItem="JdQ-kE-cff" secondAttribute="leading" constant="4" id="lkZ-ZZ-uhZ"/>
+                                                <constraint firstItem="o7u-8u-sSC" firstAttribute="top" secondItem="yBi-FU-CeY" secondAttribute="bottom" constant="4" id="uLG-ho-WRb"/>
+                                                <constraint firstAttribute="trailing" secondItem="o7u-8u-sSC" secondAttribute="trailing" constant="4" id="zib-5e-fad"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <constraints>
-                                    <constraint firstItem="0gj-lD-b0u" firstAttribute="leading" secondItem="ihI-rS-cwm" secondAttribute="leading" constant="2" id="4ZR-LL-hnW"/>
-                                    <constraint firstItem="0gj-lD-b0u" firstAttribute="top" secondItem="ihI-rS-cwm" secondAttribute="top" constant="2" id="AZy-oB-1am"/>
-                                    <constraint firstAttribute="bottom" secondItem="0gj-lD-b0u" secondAttribute="bottom" constant="2" id="Xy9-zK-Z2P"/>
-                                    <constraint firstAttribute="trailing" secondItem="0gj-lD-b0u" secondAttribute="trailing" constant="2" id="eBg-SF-pUI"/>
+                                    <constraint firstAttribute="trailing" secondItem="JdQ-kE-cff" secondAttribute="trailing" id="7ZM-Hf-cag"/>
+                                    <constraint firstAttribute="bottom" secondItem="JdQ-kE-cff" secondAttribute="bottom" id="HTA-By-lnO"/>
+                                    <constraint firstItem="JdQ-kE-cff" firstAttribute="leading" secondItem="ihI-rS-cwm" secondAttribute="leading" id="Jcg-9b-9Vg"/>
+                                    <constraint firstItem="JdQ-kE-cff" firstAttribute="top" secondItem="ihI-rS-cwm" secondAttribute="top" id="hgh-td-aFq"/>
                                 </constraints>
-                                <size key="customSize" width="198" height="198"/>
+                                <size key="customSize" width="200" height="260"/>
                                 <connections>
-                                    <outlet property="recordImageView" destination="0gj-lD-b0u" id="hYf-ZA-8mS"/>
+                                    <outlet property="captionLabel" destination="o7u-8u-sSC" id="VDv-ma-JSE"/>
+                                    <outlet property="imageViewHeightLayoutConstraint" destination="uPp-92-MSw" id="EMj-rV-rNz"/>
+                                    <outlet property="recordImageView" destination="yBi-FU-CeY" id="LgI-yO-rpc"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -188,13 +221,13 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="rTO-DG-ntL" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="3z8-ub-V2u" kind="relationship" relationship="viewControllers" id="eMn-Um-c5i"/>
+                        <segue destination="rTO-DG-ntL" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="0.0"/>
+            <point key="canvasLocation" x="-140" y="40"/>
         </scene>
         <!--Photos-->
         <scene sceneID="VbC-AU-i7q">

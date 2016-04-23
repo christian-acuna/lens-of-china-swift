@@ -20,11 +20,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let tabBarController = window!.rootViewController as! UITabBarController
         if let tabBarControllers = tabBarController.viewControllers {
-            let navigationController = tabBarControllers[0] as! UINavigationController
+            let navigationController = tabBarControllers[1] as! UINavigationController
             let photoFeedViewController = navigationController.viewControllers[0] as! PhotoFeedTableViewController
             photoFeedViewController.managedObjectContext = managedObjectContext
             
-            let navigationController2 = tabBarControllers[1] as! UINavigationController
+            let navigationController2 = tabBarControllers[0] as! UINavigationController
             let recordCollectionViewController = navigationController2.viewControllers[0] as! RecordCollectionViewController
             recordCollectionViewController.managedObjectContext = managedObjectContext
         }

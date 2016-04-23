@@ -21,7 +21,10 @@ class DetailRecordViewController: UIViewController {
         
         if let record = record {
             primaryTitleLabel.text = record.primaryTitle
+            detailImageView.image = UIImage(named: record.imageThumbURI)
         }
+        
+        
         
         // Do any additional setup after loading the view.
     }

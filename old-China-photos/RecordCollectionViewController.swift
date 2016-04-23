@@ -34,7 +34,7 @@ class RecordCollectionViewController: UICollectionViewController {
         }
         
         let size = CGRectGetWidth(collectionView!.bounds) / 2
-        collectionView!.contentInset = UIEdgeInsets(top: 23, left: 5, bottom: 10, right: 5)
+        collectionView!.contentInset = UIEdgeInsets(top: 10, left: 5, bottom: 10, right: 5)
         
         let layout = collectionViewLayout as! RecordLayout
         layout.delegate = self

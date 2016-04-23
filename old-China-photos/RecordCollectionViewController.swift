@@ -31,6 +31,10 @@ class RecordCollectionViewController: UICollectionViewController {
         } catch {
             print(error)
         }
+        
+        let width = CGRectGetWidth(collectionView!.frame) / 3
+        let layout = collectionViewLayout as! UICollectionViewFlowLayout
+        layout.itemSize = CGSize(width: width, height: width)
     }
 
     override func didReceiveMemoryWarning() {

@@ -132,10 +132,54 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="KqA-aO-nvj"/>
+                    <connections>
+                        <segue destination="Uch-1j-a47" kind="show" identifier="MasterToDetail" id="lkN-E7-NnX"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fmV-wE-dX2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1562" y="438"/>
+        </scene>
+        <!--Detail Record View Controller-->
+        <scene sceneID="cQ0-hi-vs8">
+            <objects>
+                <viewController id="Uch-1j-a47" customClass="DetailRecordViewController" customModule="old_China_photos" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JH2-fw-Szx"/>
+                        <viewControllerLayoutGuide type="bottom" id="BrA-h7-iSq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="azl-O4-r49">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mbc-Kl-REU">
+                                <rect key="frame" x="0.0" y="64" width="600" height="492"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZCD-Zh-YlK">
+                                <rect key="frame" x="279" y="289.5" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZCD-Zh-YlK" firstAttribute="centerX" secondItem="azl-O4-r49" secondAttribute="centerX" id="6b2-4M-WyP"/>
+                            <constraint firstAttribute="trailing" secondItem="Mbc-Kl-REU" secondAttribute="trailing" id="A0m-Yd-8NC"/>
+                            <constraint firstItem="Mbc-Kl-REU" firstAttribute="top" secondItem="JH2-fw-Szx" secondAttribute="bottom" id="S13-xD-7Wk"/>
+                            <constraint firstItem="ZCD-Zh-YlK" firstAttribute="centerY" secondItem="azl-O4-r49" secondAttribute="centerY" id="mOM-cH-sig"/>
+                            <constraint firstAttribute="bottom" secondItem="Mbc-Kl-REU" secondAttribute="bottom" constant="44" id="nU3-4x-Wu0"/>
+                            <constraint firstItem="Mbc-Kl-REU" firstAttribute="leading" secondItem="azl-O4-r49" secondAttribute="leading" id="wW3-Nd-OOB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="detailImageView" destination="Mbc-Kl-REU" id="hDK-1F-oV6"/>
+                        <outlet property="primaryTitleLabel" destination="ZCD-Zh-YlK" id="88F-gA-rRN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RXg-tS-RoR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2300" y="438"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">

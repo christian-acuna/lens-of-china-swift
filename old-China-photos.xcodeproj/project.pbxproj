@@ -15,6 +15,7 @@
 		4B368C131CC86F8700978B13 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4B368C111CC86F8700978B13 /* DataModel.xcdatamodeld */; };
 		4B368C161CC871FA00978B13 /* Record+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B368C141CC871FA00978B13 /* Record+CoreDataProperties.swift */; };
 		4B368C171CC871FA00978B13 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B368C151CC871FA00978B13 /* Record.swift */; };
+		4B3D3C881CCB11B400BB23C4 /* DetailRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3D3C871CCB11B400BB23C4 /* DetailRecordViewController.swift */; };
 		4B3E83C41CC89FB400053278 /* record.csv in Resources */ = {isa = PBXBuildFile; fileRef = 4B3E83C31CC89FB400053278 /* record.csv */; };
 		4B3E83C61CC8B08B00053278 /* RecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3E83C51CC8B08B00053278 /* RecordCell.swift */; };
 		4B3E83C81CC8B75800053278 /* UIImageView+DownloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3E83C71CC8B75800053278 /* UIImageView+DownloadImage.swift */; };
@@ -33,6 +34,7 @@
 		4B368C121CC86F8700978B13 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		4B368C141CC871FA00978B13 /* Record+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Record+CoreDataProperties.swift"; path = "../Record+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		4B368C151CC871FA00978B13 /* Record.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Record.swift; path = ../Record.swift; sourceTree = "<group>"; };
+		4B3D3C871CCB11B400BB23C4 /* DetailRecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailRecordViewController.swift; sourceTree = "<group>"; };
 		4B3E83C31CC89FB400053278 /* record.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = record.csv; path = ../record.csv; sourceTree = "<group>"; };
 		4B3E83C51CC8B08B00053278 /* RecordCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordCell.swift; sourceTree = "<group>"; };
 		4B3E83C71CC8B75800053278 /* UIImageView+DownloadImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+DownloadImage.swift"; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 			children = (
 				4B368BFC1CC86C3700978B13 /* PhotoFeedTableViewController.swift */,
 				4BE1043C1CCA11B3007220C9 /* RecordCollectionViewController.swift */,
+				4B3D3C871CCB11B400BB23C4 /* DetailRecordViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 				4B3E83C61CC8B08B00053278 /* RecordCell.swift in Sources */,
 				4B3E83C81CC8B75800053278 /* UIImageView+DownloadImage.swift in Sources */,
 				4B368C131CC86F8700978B13 /* DataModel.xcdatamodeld in Sources */,
+				4B3D3C881CCB11B400BB23C4 /* DetailRecordViewController.swift in Sources */,
 				4B368BFB1CC86C3700978B13 /* AppDelegate.swift in Sources */,
 				4B368BFD1CC86C3700978B13 /* PhotoFeedTableViewController.swift in Sources */,
 				4BE1043B1CCA1192007220C9 /* RecordCollectionViewCell.swift in Sources */,

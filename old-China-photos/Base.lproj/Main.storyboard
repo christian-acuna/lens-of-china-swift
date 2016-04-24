@@ -95,6 +95,7 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="hU1-nf-67i">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewLayout key="collectionViewLayout" id="jqo-tM-a7y" customClass="RecordLayout" customModule="old_China_photos" customModuleProvider="target"/>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="ihI-rS-cwm" customClass="RecordCollectionViewCell" customModule="old_China_photos" customModuleProvider="target">
@@ -105,7 +106,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JdQ-kE-cff" customClass="RoundedCornersView" customModule="old_China_photos" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="200" height="260"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yBi-FU-CeY">
                                                     <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
@@ -113,24 +114,12 @@
                                                         <constraint firstAttribute="height" constant="200" id="uPp-92-MSw"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Caption" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o7u-8u-sSC">
-                                                    <rect key="frame" x="4" y="204" width="192" height="48"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="48" id="B0C-4a-OeA"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstItem="yBi-FU-CeY" firstAttribute="top" secondItem="JdQ-kE-cff" secondAttribute="top" id="3L4-od-vgu"/>
                                                 <constraint firstItem="yBi-FU-CeY" firstAttribute="leading" secondItem="JdQ-kE-cff" secondAttribute="leading" id="MlJ-2r-0al"/>
                                                 <constraint firstAttribute="trailing" secondItem="yBi-FU-CeY" secondAttribute="trailing" id="lfJ-li-uBL"/>
-                                                <constraint firstItem="o7u-8u-sSC" firstAttribute="leading" secondItem="JdQ-kE-cff" secondAttribute="leading" constant="4" id="lkZ-ZZ-uhZ"/>
-                                                <constraint firstItem="o7u-8u-sSC" firstAttribute="top" secondItem="yBi-FU-CeY" secondAttribute="bottom" constant="4" id="uLG-ho-WRb"/>
-                                                <constraint firstAttribute="trailing" secondItem="o7u-8u-sSC" secondAttribute="trailing" constant="4" id="zib-5e-fad"/>
                                             </constraints>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -138,19 +127,76 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </view>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="izc-Oq-tPO">
+                                            <rect key="frame" x="0.0" y="205" width="192" height="50"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o7u-8u-sSC">
+                                                    <rect key="frame" x="0.0" y="0.0" width="32" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="48" id="B0C-4a-OeA"/>
+                                                        <constraint firstAttribute="height" constant="32.5" id="K35-0c-8wq"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="B0C-4a-OeA"/>
+                                                            <exclude reference="K35-0c-8wq"/>
+                                                        </mask>
+                                                    </variation>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2zY-As-LZp">
+                                                    <rect key="frame" x="0.0" y="24" width="20" height="13"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="32.5" id="EnJ-xw-nvJ"/>
+                                                        <constraint firstAttribute="height" constant="48" id="Mya-uB-ZdU"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="11"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="EnJ-xw-nvJ"/>
+                                                            <exclude reference="Mya-uB-ZdU"/>
+                                                        </mask>
+                                                    </variation>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jmI-7a-ikq">
+                                                    <rect key="frame" x="0.0" y="37" width="26" height="13"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="7tI-TO-mbP"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-LightItalic" family="Helvetica Neue" pointSize="11"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="7tI-TO-mbP"/>
+                                                        </mask>
+                                                    </variation>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="JdQ-kE-cff" secondAttribute="trailing" id="7ZM-Hf-cag"/>
-                                    <constraint firstAttribute="bottom" secondItem="JdQ-kE-cff" secondAttribute="bottom" id="HTA-By-lnO"/>
+                                    <constraint firstAttribute="bottom" secondItem="JdQ-kE-cff" secondAttribute="bottom" constant="60" id="HTA-By-lnO"/>
                                     <constraint firstItem="JdQ-kE-cff" firstAttribute="leading" secondItem="ihI-rS-cwm" secondAttribute="leading" id="Jcg-9b-9Vg"/>
+                                    <constraint firstAttribute="trailing" secondItem="izc-Oq-tPO" secondAttribute="trailing" constant="8" id="Oo2-BP-BQF"/>
+                                    <constraint firstItem="izc-Oq-tPO" firstAttribute="leading" secondItem="ihI-rS-cwm" secondAttribute="leading" id="Q8h-2s-BJC"/>
+                                    <constraint firstAttribute="bottom" secondItem="izc-Oq-tPO" secondAttribute="bottom" constant="5" id="Qlk-mi-wc1"/>
                                     <constraint firstItem="JdQ-kE-cff" firstAttribute="top" secondItem="ihI-rS-cwm" secondAttribute="top" id="hgh-td-aFq"/>
+                                    <constraint firstItem="izc-Oq-tPO" firstAttribute="top" secondItem="JdQ-kE-cff" secondAttribute="bottom" constant="5" id="vpa-qV-18w"/>
                                 </constraints>
                                 <size key="customSize" width="200" height="260"/>
                                 <connections>
                                     <outlet property="captionLabel" destination="o7u-8u-sSC" id="VDv-ma-JSE"/>
+                                    <outlet property="dateLabel" destination="jmI-7a-ikq" id="U7g-Zy-wt2"/>
                                     <outlet property="imageViewHeightLayoutConstraint" destination="uPp-92-MSw" id="EMj-rV-rNz"/>
+                                    <outlet property="primaryTitleLabel" destination="2zY-As-LZp" id="atU-pJ-Bjb"/>
                                     <outlet property="recordImageView" destination="yBi-FU-CeY" id="LgI-yO-rpc"/>
                                 </connections>
                             </collectionViewCell>
@@ -187,7 +233,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZCD-Zh-YlK">
                                 <rect key="frame" x="279" y="289.5" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>

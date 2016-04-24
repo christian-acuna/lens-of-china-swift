@@ -12,13 +12,17 @@ class RecordCollectionViewCell: UICollectionViewCell {
     @IBOutlet var recordImageView: UIImageView!
     @IBOutlet private weak var imageViewHeightLayoutConstraint: NSLayoutConstraint!
     @IBOutlet private weak var captionLabel: UILabel!
+    @IBOutlet private weak var dateLabel: UILabel!
+    @IBOutlet private weak var primaryTitleLabel: UILabel!
     
     
     func configureCollectionForRecrod(record: Record) {
         
         let image = UIImage(named: record.imageThumbURI)
         recordImageView.image = image
-        captionLabel.text = record.primaryTitle
+        captionLabel.text = record.makerName
+        dateLabel.text = record.date
+        primaryTitleLabel.text = record.primaryTitle
         
         
         //        if let url = NSURL(string: record.imageThumbURI) {

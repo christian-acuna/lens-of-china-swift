@@ -267,8 +267,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
+                        <segue destination="Y2Z-dg-bv3" kind="relationship" relationship="viewControllers" id="xWv-qN-kSM"/>
                         <segue destination="3z8-ub-V2u" kind="relationship" relationship="viewControllers" id="eMn-Um-c5i"/>
-                        <segue destination="rTO-DG-ntL" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -312,6 +312,60 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jc2-AC-p7u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="750" y="438"/>
+        </scene>
+        <!--City-->
+        <scene sceneID="sCP-mB-5ew">
+            <objects>
+                <collectionViewController id="Y2Z-dg-bv3" customClass="CityCollectionViewController" customModule="old_China_photos" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="C6b-k1-xQr">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewLayout key="collectionViewLayout" id="IMF-Uh-uaV" customClass="CityLayout" customModule="old_China_photos" customModuleProvider="target"/>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CityCell" id="sck-0Y-mb0" customClass="CityCell" customModule="old_China_photos" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sG8-Oz-Xkt">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                        </imageView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wg4-KS-reA">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="wg4-KS-reA" firstAttribute="top" secondItem="sck-0Y-mb0" secondAttribute="top" id="1rr-bl-DXt"/>
+                                    <constraint firstItem="sG8-Oz-Xkt" firstAttribute="top" secondItem="sck-0Y-mb0" secondAttribute="top" id="DaY-jx-40k"/>
+                                    <constraint firstAttribute="trailing" secondItem="sG8-Oz-Xkt" secondAttribute="trailing" id="EtI-0m-24x"/>
+                                    <constraint firstAttribute="bottom" secondItem="wg4-KS-reA" secondAttribute="bottom" id="Jhh-Fv-qaS"/>
+                                    <constraint firstItem="sG8-Oz-Xkt" firstAttribute="leading" secondItem="sck-0Y-mb0" secondAttribute="leading" id="P9e-pE-vYW"/>
+                                    <constraint firstAttribute="bottom" secondItem="sG8-Oz-Xkt" secondAttribute="bottom" id="gPf-YL-IsM"/>
+                                    <constraint firstItem="wg4-KS-reA" firstAttribute="leading" secondItem="sck-0Y-mb0" secondAttribute="leading" id="l09-uF-Jy9"/>
+                                    <constraint firstAttribute="trailing" secondItem="wg4-KS-reA" secondAttribute="trailing" id="wAr-YS-cRe"/>
+                                </constraints>
+                                <size key="customSize" width="200" height="200"/>
+                                <connections>
+                                    <outlet property="imageCoverView" destination="wg4-KS-reA" id="IV1-XA-TIr"/>
+                                    <outlet property="imageView" destination="sG8-Oz-Xkt" id="R8E-5R-f4c"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="Y2Z-dg-bv3" id="zfS-8V-eeC"/>
+                            <outlet property="delegate" destination="Y2Z-dg-bv3" id="SEc-24-Izp"/>
+                        </connections>
+                    </collectionView>
+                    <tabBarItem key="tabBarItem" title="City" id="a2z-04-1W4"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RAK-Yf-1WJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-140" y="1139"/>
         </scene>
     </scenes>
 </document>

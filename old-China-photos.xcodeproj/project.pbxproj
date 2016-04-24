@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		4B2CBC521CCCC8E800D081E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B2CBC511CCCC8E800D081E0 /* Assets.xcassets */; };
+		4B2CBC541CCCCBC600D081E0 /* CityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2CBC531CCCCBC600D081E0 /* CityCell.swift */; };
+		4B2CBC581CCCCCCD00D081E0 /* CityLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2CBC571CCCCCCD00D081E0 /* CityLayout.swift */; };
+		4B2CBC5A1CCCCD0200D081E0 /* CityCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2CBC591CCCCD0200D081E0 /* CityCollectionViewController.swift */; };
 		4B368BFB1CC86C3700978B13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B368BFA1CC86C3700978B13 /* AppDelegate.swift */; };
 		4B368BFD1CC86C3700978B13 /* PhotoFeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B368BFC1CC86C3700978B13 /* PhotoFeedTableViewController.swift */; };
 		4B368C021CC86C3700978B13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B368C001CC86C3700978B13 /* Main.storyboard */; };
@@ -27,6 +30,9 @@
 
 /* Begin PBXFileReference section */
 		4B2CBC511CCCC8E800D081E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4B2CBC531CCCCBC600D081E0 /* CityCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityCell.swift; sourceTree = "<group>"; };
+		4B2CBC571CCCCCCD00D081E0 /* CityLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityLayout.swift; sourceTree = "<group>"; };
+		4B2CBC591CCCCD0200D081E0 /* CityCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityCollectionViewController.swift; sourceTree = "<group>"; };
 		4B368BF71CC86C3700978B13 /* old-China-photos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "old-China-photos.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B368BFA1CC86C3700978B13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4B368BFC1CC86C3700978B13 /* PhotoFeedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFeedTableViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +102,7 @@
 				4B368BFC1CC86C3700978B13 /* PhotoFeedTableViewController.swift */,
 				4BE1043C1CCA11B3007220C9 /* RecordCollectionViewController.swift */,
 				4B3D3C871CCB11B400BB23C4 /* DetailRecordViewController.swift */,
+				4B2CBC591CCCCD0200D081E0 /* CityCollectionViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -107,6 +114,7 @@
 				4B3E83C71CC8B75800053278 /* UIImageView+DownloadImage.swift */,
 				4BE1043A1CCA1192007220C9 /* RecordCollectionViewCell.swift */,
 				4B57FCB61CCB5A5700D9836F /* RoundedCorners.swift */,
+				4B2CBC531CCCCBC600D081E0 /* CityCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -125,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				4B57FCB41CCB523F00D9836F /* RecordCollectionLayout.swift */,
+				4B2CBC571CCCCCCD00D081E0 /* CityLayout.swift */,
 			);
 			name = Layout;
 			sourceTree = "<group>";
@@ -205,8 +214,11 @@
 				4BE1043D1CCA11B3007220C9 /* RecordCollectionViewController.swift in Sources */,
 				4B368C161CC871FA00978B13 /* Record+CoreDataProperties.swift in Sources */,
 				4B368C171CC871FA00978B13 /* Record.swift in Sources */,
+				4B2CBC541CCCCBC600D081E0 /* CityCell.swift in Sources */,
 				4B3E83C61CC8B08B00053278 /* RecordCell.swift in Sources */,
+				4B2CBC5A1CCCCD0200D081E0 /* CityCollectionViewController.swift in Sources */,
 				4B57FCB71CCB5A5700D9836F /* RoundedCorners.swift in Sources */,
+				4B2CBC581CCCCCCD00D081E0 /* CityLayout.swift in Sources */,
 				4B3E83C81CC8B75800053278 /* UIImageView+DownloadImage.swift in Sources */,
 				4B57FCB51CCB523F00D9836F /* RecordCollectionLayout.swift in Sources */,
 				4B368C131CC86F8700978B13 /* DataModel.xcdatamodeld in Sources */,

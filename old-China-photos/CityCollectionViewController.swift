@@ -12,7 +12,8 @@ private let reuseIdentifier = "Cell"
 
 class CityCollectionViewController: UICollectionViewController {
 
-    var cities = ["30757101", "30756501", "30758101", "30757701"]
+    var cities = ["30753001", "18857901", "30757701", "30345401", "30751901"]
+    let names = ["Beijing", "Shanghai", "Canton", "Macao", "Tianjin"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,8 +51,9 @@ class CityCollectionViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CityCell", forIndexPath: indexPath) as! CityCell
         
         let city = cities[indexPath.item]
+        let name = names[indexPath.item]
         
-        cell.configureCollectionForCity(city)
+        cell.configureCollectionForCity(city, name: name)
         // Configure the cell
     
         return cell

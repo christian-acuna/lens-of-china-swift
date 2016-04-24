@@ -330,12 +330,24 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sG8-Oz-Xkt">
-                                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                            <rect key="frame" x="0.0" y="-40" width="200" height="280"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="280" id="dtz-ng-a7S"/>
+                                            </constraints>
                                         </imageView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wg4-KS-reA">
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beijing" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BMT-Z7-pvU">
+                                            <rect key="frame" x="0.0" y="77" width="200" height="46"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="46" id="xLJ-fi-foF"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="38"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
@@ -345,12 +357,23 @@
                                     <constraint firstAttribute="trailing" secondItem="sG8-Oz-Xkt" secondAttribute="trailing" id="EtI-0m-24x"/>
                                     <constraint firstAttribute="bottom" secondItem="wg4-KS-reA" secondAttribute="bottom" id="Jhh-Fv-qaS"/>
                                     <constraint firstItem="sG8-Oz-Xkt" firstAttribute="leading" secondItem="sck-0Y-mb0" secondAttribute="leading" id="P9e-pE-vYW"/>
+                                    <constraint firstAttribute="trailing" secondItem="BMT-Z7-pvU" secondAttribute="trailing" id="Sh0-Dc-Zey"/>
+                                    <constraint firstItem="BMT-Z7-pvU" firstAttribute="centerY" secondItem="sck-0Y-mb0" secondAttribute="centerY" id="b1Z-fG-63D"/>
                                     <constraint firstAttribute="bottom" secondItem="sG8-Oz-Xkt" secondAttribute="bottom" id="gPf-YL-IsM"/>
                                     <constraint firstItem="wg4-KS-reA" firstAttribute="leading" secondItem="sck-0Y-mb0" secondAttribute="leading" id="l09-uF-Jy9"/>
+                                    <constraint firstItem="sG8-Oz-Xkt" firstAttribute="centerY" secondItem="sck-0Y-mb0" secondAttribute="centerY" id="lPw-Fd-fOI"/>
+                                    <constraint firstItem="BMT-Z7-pvU" firstAttribute="leading" secondItem="sck-0Y-mb0" secondAttribute="leading" id="vaJ-Pm-VZL"/>
                                     <constraint firstAttribute="trailing" secondItem="wg4-KS-reA" secondAttribute="trailing" id="wAr-YS-cRe"/>
                                 </constraints>
                                 <size key="customSize" width="200" height="200"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="DaY-jx-40k"/>
+                                        <exclude reference="gPf-YL-IsM"/>
+                                    </mask>
+                                </variation>
                                 <connections>
+                                    <outlet property="cityLabel" destination="BMT-Z7-pvU" id="UKg-wQ-03T"/>
                                     <outlet property="imageCoverView" destination="wg4-KS-reA" id="IV1-XA-TIr"/>
                                     <outlet property="imageView" destination="sG8-Oz-Xkt" id="R8E-5R-f4c"/>
                                 </connections>

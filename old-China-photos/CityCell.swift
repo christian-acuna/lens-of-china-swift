@@ -31,13 +31,14 @@ class CityCell: UICollectionViewCell {
         
         imageCoverView.alpha = maxAlpha - (delta * (maxAlpha - minAlpha))
         let scale = max(delta, 0.5)
-//        cityLabel.transform = CGAffineTransformMakeScale(scale, scale)
+        cityLabel.transform = CGAffineTransformMakeScale(scale, scale)
 //        timeAndRoomLabel.alpha = delta
 //        speakerLabel.alpha = delta
     }
     
-    func configureCollectionForCity(city: String) {
+    func configureCollectionForCity(city: String, name: String) {
         imageView.image = UIImage(named: city)
+        cityLabel.text = name
     }
     
     

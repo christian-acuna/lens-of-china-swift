@@ -227,24 +227,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mbc-Kl-REU">
-                                <rect key="frame" x="0.0" y="64" width="600" height="492"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZCD-Zh-YlK">
-                                <rect key="frame" x="279" y="289.5" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mcO-wE-hha">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="30756501" translatesAutoresizingMaskIntoConstraints="NO" id="Mbc-Kl-REU">
+                                        <rect key="frame" x="0.0" y="0.0" width="249" height="300"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZCD-Zh-YlK">
+                                        <rect key="frame" x="99" y="54" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Mbc-Kl-REU" firstAttribute="top" secondItem="mcO-wE-hha" secondAttribute="top" id="VsL-qv-uKs"/>
+                                    <constraint firstAttribute="trailing" secondItem="Mbc-Kl-REU" secondAttribute="trailing" id="XLL-Vq-kWO"/>
+                                    <constraint firstAttribute="bottom" secondItem="Mbc-Kl-REU" secondAttribute="bottom" id="jhO-5q-Vg9"/>
+                                    <constraint firstItem="Mbc-Kl-REU" firstAttribute="leading" secondItem="mcO-wE-hha" secondAttribute="leading" id="voa-KV-OGN"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ZCD-Zh-YlK" firstAttribute="centerX" secondItem="azl-O4-r49" secondAttribute="centerX" id="6b2-4M-WyP"/>
-                            <constraint firstAttribute="trailing" secondItem="Mbc-Kl-REU" secondAttribute="trailing" id="A0m-Yd-8NC"/>
-                            <constraint firstItem="Mbc-Kl-REU" firstAttribute="top" secondItem="JH2-fw-Szx" secondAttribute="bottom" id="S13-xD-7Wk"/>
-                            <constraint firstItem="ZCD-Zh-YlK" firstAttribute="centerY" secondItem="azl-O4-r49" secondAttribute="centerY" id="mOM-cH-sig"/>
-                            <constraint firstAttribute="bottom" secondItem="Mbc-Kl-REU" secondAttribute="bottom" constant="44" id="nU3-4x-Wu0"/>
-                            <constraint firstItem="Mbc-Kl-REU" firstAttribute="leading" secondItem="azl-O4-r49" secondAttribute="leading" id="wW3-Nd-OOB"/>
+                            <constraint firstItem="mcO-wE-hha" firstAttribute="top" secondItem="JH2-fw-Szx" secondAttribute="bottom" id="3kt-w7-2oO"/>
+                            <constraint firstItem="mcO-wE-hha" firstAttribute="leading" secondItem="azl-O4-r49" secondAttribute="leading" id="Nxs-Ct-9bY"/>
+                            <constraint firstItem="BrA-h7-iSq" firstAttribute="top" secondItem="mcO-wE-hha" secondAttribute="bottom" id="egK-NM-eIK"/>
+                            <constraint firstAttribute="trailing" secondItem="mcO-wE-hha" secondAttribute="trailing" id="zHK-xh-2dQ"/>
                         </constraints>
                     </view>
                     <connections>
@@ -391,4 +400,7 @@
             <point key="canvasLocation" x="-140" y="1139"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="30756501" width="249" height="300"/>
+    </resources>
 </document>

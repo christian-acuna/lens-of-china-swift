@@ -76,7 +76,7 @@ class RecordCollectionViewController: UICollectionViewController {
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "MasterToDetail" {
-            let detailRecordViewController = segue.destinationViewController as! DetailRecordViewController
+            let detailRecordViewController = segue.destinationViewController as! RecordViewController
             detailRecordViewController.record = sender as? Record
         }
     }

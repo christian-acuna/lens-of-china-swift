@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B14F2CE1CCE09E000FBB54C /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B14F2CD1CCE09E000FBB54C /* RecordViewController.swift */; };
 		4B2CBC521CCCC8E800D081E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B2CBC511CCCC8E800D081E0 /* Assets.xcassets */; };
 		4B2CBC541CCCCBC600D081E0 /* CityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2CBC531CCCCBC600D081E0 /* CityCell.swift */; };
 		4B2CBC581CCCCCCD00D081E0 /* CityLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2CBC571CCCCCCD00D081E0 /* CityLayout.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4B14F2CD1CCE09E000FBB54C /* RecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 		4B2CBC511CCCC8E800D081E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B2CBC531CCCCBC600D081E0 /* CityCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityCell.swift; sourceTree = "<group>"; };
 		4B2CBC571CCCCCCD00D081E0 /* CityLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityLayout.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 			children = (
 				4B368BFC1CC86C3700978B13 /* PhotoFeedTableViewController.swift */,
 				4BE1043C1CCA11B3007220C9 /* RecordCollectionViewController.swift */,
+				4B14F2CD1CCE09E000FBB54C /* RecordViewController.swift */,
 				4B3D3C871CCB11B400BB23C4 /* DetailRecordViewController.swift */,
 				4B2CBC591CCCCD0200D081E0 /* CityCollectionViewController.swift */,
 			);
@@ -214,6 +217,7 @@
 				4BE1043D1CCA11B3007220C9 /* RecordCollectionViewController.swift in Sources */,
 				4B368C161CC871FA00978B13 /* Record+CoreDataProperties.swift in Sources */,
 				4B368C171CC871FA00978B13 /* Record.swift in Sources */,
+				4B14F2CE1CCE09E000FBB54C /* RecordViewController.swift in Sources */,
 				4B2CBC541CCCCBC600D081E0 /* CityCell.swift in Sources */,
 				4B3E83C61CC8B08B00053278 /* RecordCell.swift in Sources */,
 				4B2CBC5A1CCCCD0200D081E0 /* CityCollectionViewController.swift in Sources */,

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B0FA3351CCE2290005DD4C9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B0FA3341CCE2290005DD4C9 /* MapKit.framework */; };
+		4B0FA3371CCE22D7005DD4C9 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0FA3361CCE22D7005DD4C9 /* MapViewController.swift */; };
 		4B14F2CE1CCE09E000FBB54C /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B14F2CD1CCE09E000FBB54C /* RecordViewController.swift */; };
 		4B2CBC521CCCC8E800D081E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B2CBC511CCCC8E800D081E0 /* Assets.xcassets */; };
 		4B2CBC541CCCCBC600D081E0 /* CityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2CBC531CCCCBC600D081E0 /* CityCell.swift */; };
@@ -29,6 +31,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4B0FA3341CCE2290005DD4C9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		4B0FA3361CCE22D7005DD4C9 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		4B14F2CD1CCE09E000FBB54C /* RecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 		4B2CBC511CCCC8E800D081E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B2CBC531CCCCBC600D081E0 /* CityCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityCell.swift; sourceTree = "<group>"; };
@@ -57,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B0FA3351CCE2290005DD4C9 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +71,7 @@
 		4B368BEE1CC86C3700978B13 = {
 			isa = PBXGroup;
 			children = (
+				4B0FA3341CCE2290005DD4C9 /* MapKit.framework */,
 				4B368BF91CC86C3700978B13 /* old-China-photos */,
 				4B368BF81CC86C3700978B13 /* Products */,
 			);
@@ -103,6 +109,7 @@
 				4B14F2CD1CCE09E000FBB54C /* RecordViewController.swift */,
 				4B3D3C871CCB11B400BB23C4 /* DetailRecordViewController.swift */,
 				4B2CBC591CCCCD0200D081E0 /* CityCollectionViewController.swift */,
+				4B0FA3361CCE22D7005DD4C9 /* MapViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -226,6 +233,7 @@
 				4B3D3C881CCB11B400BB23C4 /* DetailRecordViewController.swift in Sources */,
 				4B368BFB1CC86C3700978B13 /* AppDelegate.swift in Sources */,
 				4BE1043B1CCA1192007220C9 /* RecordCollectionViewCell.swift in Sources */,
+				4B0FA3371CCE22D7005DD4C9 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

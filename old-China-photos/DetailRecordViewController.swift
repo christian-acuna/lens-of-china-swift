@@ -13,6 +13,10 @@ class DetailRecordViewController: UIViewController {
     @IBOutlet weak var detailImageView: UIImageView!
     @IBOutlet weak var primaryTitleLabel: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var imageViewBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var imageViewLeadingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var imageViewTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var imageViewTrailingConstraint: NSLayoutConstraint!
     
 //    recordToZoom
     var imageRecord: Record?
@@ -24,8 +28,9 @@ class DetailRecordViewController: UIViewController {
             primaryTitleLabel.text = record.primaryTitle
             detailImageView.image = UIImage(named: record.imageThumbURI)
         }
-        updateMinZoomScaleForSize(view.bounds.size)
         scrollView.delegate = self
+        updateConstraintsForSize(view.bounds.size)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,10 +56,27 @@ class DetailRecordViewController: UIViewController {
         scrollView.minimumZoomScale = minScale
         scrollView.zoomScale = minScale
     }
+    
+    private func updateConstraintsForSize(size: CGSize) {
+        
+        let yOffset = max(0, (size.height - detailImageView.frame.height) / 2)
+        imageViewTopConstraint.constant = yOffset
+        imageViewBottomConstraint.constant = yOffset
+        
+        let xOffset = max(0, (size.width - detailImageView.frame.width) / 2)
+        imageViewLeadingConstraint.constant = xOffset
+        imageViewTrailingConstraint.constant = xOffset
+        
+        view.layoutIfNeeded()
+    }
 }
 
 extension DetailRecordViewController: UIScrollViewDelegate {
     func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
         return detailImageView
+    }
+    
+    func scrollViewDidZoom(scrollView: UIScrollView) {
+        updateConstraintsForSize(view.bounds.size)
     }
 }

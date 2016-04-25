@@ -130,7 +130,7 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="izc-Oq-tPO">
                                             <rect key="frame" x="0.0" y="205" width="192" height="50"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o7u-8u-sSC">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o7u-8u-sSC">
                                                     <rect key="frame" x="0.0" y="0.0" width="32" height="24"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="48" id="B0C-4a-OeA"/>
@@ -146,7 +146,7 @@
                                                         </mask>
                                                     </variation>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2zY-As-LZp">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2zY-As-LZp">
                                                     <rect key="frame" x="0.0" y="24" width="20" height="13"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="32.5" id="EnJ-xw-nvJ"/>
@@ -162,7 +162,7 @@
                                                         </mask>
                                                     </variation>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jmI-7a-ikq">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jmI-7a-ikq">
                                                     <rect key="frame" x="0.0" y="37" width="26" height="13"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="7tI-TO-mbP"/>
@@ -339,6 +339,10 @@
                     </view>
                     <connections>
                         <outlet property="detailImageView" destination="M9C-WX-IUM" id="RBX-EQ-ius"/>
+                        <outlet property="imageViewBottomConstraint" destination="R9e-Md-Asf" id="o1V-6g-ivk"/>
+                        <outlet property="imageViewLeadingConstraint" destination="TuT-ws-7fy" id="5S6-lm-ENM"/>
+                        <outlet property="imageViewTopConstraint" destination="GGA-FC-egU" id="kfx-Pg-R6n"/>
+                        <outlet property="imageViewTrailingConstraint" destination="ccF-U1-2cZ" id="aMP-0U-Xe8"/>
                         <outlet property="primaryTitleLabel" destination="ZCD-Zh-YlK" id="88F-gA-rRN"/>
                         <outlet property="scrollView" destination="mcO-wE-hha" id="k0u-wl-mgE"/>
                     </connections>

@@ -22,6 +22,7 @@ class CityCollectionViewController: UICollectionViewController {
         super.viewDidLoad()
         
         collectionView!.decelerationRate = UIScrollViewDecelerationRateFast
+        collectionView!.contentInset = UIEdgeInsets(top: 44, left: 0, bottom: 0, right: 0)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -60,6 +61,13 @@ class CityCollectionViewController: UICollectionViewController {
         // Configure the cell
     
         return cell
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "cityToRecord" {
+            let recordCollectionViewController = segue.destinationViewController as! RecordCollectionViewController
+            recordCollectionViewController.managedObjectContext = managedObjectContext
+        }
     }
 
     // MARK: UICollectionViewDelegate

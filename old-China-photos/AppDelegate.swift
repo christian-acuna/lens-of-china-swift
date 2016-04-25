@@ -20,16 +20,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let tabBarController = window!.rootViewController as! UITabBarController
         if let tabBarControllers = tabBarController.viewControllers {
-//            let navigationController = tabBarControllers[1] as! UINavigationController
+//            let navigationController = tabBarControllers[1] as!
 //            let photoFeedViewController = navigationController.viewControllers[0] as! PhotoFeedTableViewController
 //            photoFeedViewController.managedObjectContext = managedObjectContext
             
-            let cityCollectionViewController = tabBarControllers[0] as! CityCollectionViewController
+            let navigationController = tabBarControllers[0] as! UINavigationController
+            let cityCollectionViewController = navigationController.viewControllers[0] as! CityCollectionViewController
             cityCollectionViewController.managedObjectContext = managedObjectContext
             
-            let navigationController2 = tabBarControllers[2] as! UINavigationController
-            let recordCollectionViewController = navigationController2.viewControllers[0] as! RecordCollectionViewController
-            recordCollectionViewController.managedObjectContext = managedObjectContext
+//            let navigationController2 = tabBarControllers[1] as! UINavigationController
+//            let recordCollectionViewController = navigationController2.viewControllers[0] as! RecordCollectionViewController
+//            recordCollectionViewController.managedObjectContext = managedObjectContext
         }
         
         preloadData()

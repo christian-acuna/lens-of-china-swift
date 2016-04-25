@@ -17,8 +17,7 @@ class RecordCollectionViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        super.viewDidLoad()
+        self.navigationController?.navigationBarHidden = false
         let fetchRequest = NSFetchRequest()
         let entity = NSEntityDescription.entityForName("Record", inManagedObjectContext: managedObjectContext)
         fetchRequest.entity = entity

@@ -13,7 +13,6 @@
 		4B2CBC581CCCCCCD00D081E0 /* CityLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2CBC571CCCCCCD00D081E0 /* CityLayout.swift */; };
 		4B2CBC5A1CCCCD0200D081E0 /* CityCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2CBC591CCCCD0200D081E0 /* CityCollectionViewController.swift */; };
 		4B368BFB1CC86C3700978B13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B368BFA1CC86C3700978B13 /* AppDelegate.swift */; };
-		4B368BFD1CC86C3700978B13 /* PhotoFeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B368BFC1CC86C3700978B13 /* PhotoFeedTableViewController.swift */; };
 		4B368C021CC86C3700978B13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B368C001CC86C3700978B13 /* Main.storyboard */; };
 		4B368C071CC86C3700978B13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B368C051CC86C3700978B13 /* LaunchScreen.storyboard */; };
 		4B368C131CC86F8700978B13 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4B368C111CC86F8700978B13 /* DataModel.xcdatamodeld */; };
@@ -37,7 +36,6 @@
 		4B2CBC591CCCCD0200D081E0 /* CityCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityCollectionViewController.swift; sourceTree = "<group>"; };
 		4B368BF71CC86C3700978B13 /* old-China-photos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "old-China-photos.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B368BFA1CC86C3700978B13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4B368BFC1CC86C3700978B13 /* PhotoFeedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFeedTableViewController.swift; sourceTree = "<group>"; };
 		4B368C011CC86C3700978B13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4B368C061CC86C3700978B13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4B368C081CC86C3700978B13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -101,7 +99,6 @@
 		4B368C0E1CC86F2600978B13 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				4B368BFC1CC86C3700978B13 /* PhotoFeedTableViewController.swift */,
 				4BE1043C1CCA11B3007220C9 /* RecordCollectionViewController.swift */,
 				4B14F2CD1CCE09E000FBB54C /* RecordViewController.swift */,
 				4B3D3C871CCB11B400BB23C4 /* DetailRecordViewController.swift */,
@@ -228,7 +225,6 @@
 				4B368C131CC86F8700978B13 /* DataModel.xcdatamodeld in Sources */,
 				4B3D3C881CCB11B400BB23C4 /* DetailRecordViewController.swift in Sources */,
 				4B368BFB1CC86C3700978B13 /* AppDelegate.swift in Sources */,
-				4B368BFD1CC86C3700978B13 /* PhotoFeedTableViewController.swift in Sources */,
 				4BE1043B1CCA1192007220C9 /* RecordCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

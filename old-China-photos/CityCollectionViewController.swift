@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import CoreData
 
 private let reuseIdentifier = "Cell"
 
 class CityCollectionViewController: UICollectionViewController {
+    
+    var managedObjectContext: NSManagedObjectContext!
 
     var cities = ["30753001", "18857901", "30757701", "30345401", "30751901"]
     let names = ["Beijing", "Shanghai", "Canton", "Macao", "Tianjin"]

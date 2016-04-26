@@ -20,6 +20,7 @@ class RecordViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         if let record = record {
             primaryTitleLabel.text = record.primaryTitle
             detailButton.setImage(UIImage(named: record.imageThumbURI), forState: .Normal)

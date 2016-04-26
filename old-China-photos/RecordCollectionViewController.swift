@@ -14,9 +14,17 @@ class RecordCollectionViewController: UICollectionViewController {
     
     var records = [Record]()
     var managedObjectContext: NSManagedObjectContext!
+    var cityCollectionToView: Int?
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let city = cityCollectionToView {
+            print("*** The City number is \(city)")
+        }
+        
         let fetchRequest = NSFetchRequest()
         let entity = NSEntityDescription.entityForName("Record", inManagedObjectContext: managedObjectContext)
         fetchRequest.entity = entity

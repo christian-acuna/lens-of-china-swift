@@ -57,7 +57,7 @@ class MapViewController: UIViewController {
                 }
                 
                 let center = CLLocationCoordinate2D( latitude: topLeftCoord.latitude - (topLeftCoord.latitude - bottomRightCoord.latitude) / 2, longitude: topLeftCoord.longitude - (topLeftCoord.longitude - bottomRightCoord.longitude) / 2)
-                let extraSpace = 1.3
+                let extraSpace = 1.6
                 let span = MKCoordinateSpan(
                     latitudeDelta: abs(topLeftCoord.latitude - bottomRightCoord.latitude) * extraSpace,
                     longitudeDelta: abs(topLeftCoord.longitude - bottomRightCoord.longitude) * extraSpace)
@@ -66,9 +66,19 @@ class MapViewController: UIViewController {
     }
     
     func showCityDetails(sender: UIButton) {
-        
+        performSegueWithIdentifier("showCityCollection", sender: sender)
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showCityCollection" {
+            let navigationController = segue.destinationViewController as! UINavigationController
+            let controller = navigationController.topViewController as! RecordCollectionViewController
+            controller.managedObjectContext = managedObjectContext
+            
+            let button = sender as! UIButton
+            controller.cityCollectionToView = button.tag
+        }
+    }
     
 }
 

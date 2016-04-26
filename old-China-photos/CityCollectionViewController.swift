@@ -15,6 +15,7 @@ class CityCollectionViewController: UICollectionViewController {
     
     var managedObjectContext: NSManagedObjectContext!
     
+    
     var cities = [City]()
     
     //    var cities = ["30753001", "18857901", "30757701", "30345401", "30751901"]
@@ -22,6 +23,8 @@ class CityCollectionViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+
         
         let fetchRequest = NSFetchRequest()
         let entity = NSEntityDescription.entityForName("City", inManagedObjectContext: managedObjectContext)

@@ -338,6 +338,7 @@
                     </tabBarItem>
                     <connections>
                         <outlet property="mapView" destination="wWV-bI-uiy" id="dG6-q3-Zfb"/>
+                        <segue destination="nTH-5r-6ug" kind="presentation" identifier="showCityCollection" id="Qeo-Xu-med"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YXJ-FW-GsJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -448,4 +449,7 @@
         <image name="Hamburger Menu" width="26" height="32"/>
         <image name="Map" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Qeo-Xu-med"/>
+    </inferredMetricsTieBreakers>
 </document>

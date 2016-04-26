@@ -17,7 +17,6 @@ class RecordCollectionViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBarHidden = false
         let fetchRequest = NSFetchRequest()
         let entity = NSEntityDescription.entityForName("Record", inManagedObjectContext: managedObjectContext)
         fetchRequest.entity = entity
@@ -68,6 +67,9 @@ class RecordCollectionViewController: UICollectionViewController {
         return cell
     }
     
+    @IBAction func doneButtonPressed(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         let record = records[indexPath.item]
             performSegueWithIdentifier("MasterToDetail", sender: record)

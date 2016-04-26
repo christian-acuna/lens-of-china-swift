@@ -24,8 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            let photoFeedViewController = navigationController.viewControllers[0] as! PhotoFeedTableViewController
 //            photoFeedViewController.managedObjectContext = managedObjectContext
             
-            let navigationController = tabBarControllers[0] as! UINavigationController
-            let cityCollectionViewController = navigationController.viewControllers[0] as! CityCollectionViewController
+            let cityCollectionViewController = tabBarControllers[0] as! CityCollectionViewController
             cityCollectionViewController.managedObjectContext = managedObjectContext
             
 //            let navigationController2 = tabBarControllers[1] as! UINavigationController

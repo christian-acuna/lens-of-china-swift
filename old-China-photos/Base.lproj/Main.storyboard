@@ -309,13 +309,13 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="wWV-bI-uiy">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </mapView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Yf-xb-BpS">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Yf-xb-BpS">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <items>
                                     <navigationItem title="Map" id="2sS-eV-a7A">
                                         <barButtonItem key="leftBarButtonItem" title="Locations" id="VIw-T7-nJS">
                                             <connections>
-                                                <action selector="showLocations:" destination="IKG-OB-8Id" id="nmn-Qv-G2U"/>
+                                                <action selector="showLocations" destination="IKG-OB-8Id" id="zsb-gL-5Gd"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -327,6 +327,9 @@
                             <constraint firstAttribute="trailing" secondItem="wWV-bI-uiy" secondAttribute="trailing" id="1y6-YX-rRe"/>
                             <constraint firstAttribute="bottom" secondItem="wWV-bI-uiy" secondAttribute="bottom" id="IJM-Ph-AQV"/>
                             <constraint firstItem="wWV-bI-uiy" firstAttribute="leading" secondItem="2FR-dj-aCa" secondAttribute="leading" id="lSa-cW-fpx"/>
+                            <constraint firstAttribute="trailing" secondItem="6Yf-xb-BpS" secondAttribute="trailing" id="noS-h1-n3w"/>
+                            <constraint firstItem="6Yf-xb-BpS" firstAttribute="leading" secondItem="2FR-dj-aCa" secondAttribute="leading" id="pHM-HF-Lyv"/>
+                            <constraint firstItem="6Yf-xb-BpS" firstAttribute="top" secondItem="QA4-9S-vWS" secondAttribute="bottom" id="uaP-Xb-4Kj"/>
                             <constraint firstItem="wWV-bI-uiy" firstAttribute="top" secondItem="2FR-dj-aCa" secondAttribute="top" id="yDm-y8-6Gd"/>
                         </constraints>
                     </view>

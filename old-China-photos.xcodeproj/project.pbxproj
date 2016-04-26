@@ -26,6 +26,9 @@
 		4B3E83C81CC8B75800053278 /* UIImageView+DownloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3E83C71CC8B75800053278 /* UIImageView+DownloadImage.swift */; };
 		4B57FCB51CCB523F00D9836F /* RecordCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B57FCB41CCB523F00D9836F /* RecordCollectionLayout.swift */; };
 		4B57FCB71CCB5A5700D9836F /* RoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B57FCB61CCB5A5700D9836F /* RoundedCorners.swift */; };
+		4BD4B7811CCF3F7C00DE01D3 /* City+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD4B77F1CCF3F7C00DE01D3 /* City+CoreDataProperties.swift */; };
+		4BD4B7821CCF3F7C00DE01D3 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD4B7801CCF3F7C00DE01D3 /* City.swift */; };
+		4BD4B7841CCF41AD00DE01D3 /* cities.csv in Resources */ = {isa = PBXBuildFile; fileRef = 4BD4B7831CCF41AD00DE01D3 /* cities.csv */; };
 		4BE1043B1CCA1192007220C9 /* RecordCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE1043A1CCA1192007220C9 /* RecordCollectionViewCell.swift */; };
 		4BE1043D1CCA11B3007220C9 /* RecordCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE1043C1CCA11B3007220C9 /* RecordCollectionViewController.swift */; };
 /* End PBXBuildFile section */
@@ -52,6 +55,9 @@
 		4B3E83C71CC8B75800053278 /* UIImageView+DownloadImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+DownloadImage.swift"; sourceTree = "<group>"; };
 		4B57FCB41CCB523F00D9836F /* RecordCollectionLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordCollectionLayout.swift; sourceTree = "<group>"; };
 		4B57FCB61CCB5A5700D9836F /* RoundedCorners.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedCorners.swift; sourceTree = "<group>"; };
+		4BD4B77F1CCF3F7C00DE01D3 /* City+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "City+CoreDataProperties.swift"; path = "../City+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4BD4B7801CCF3F7C00DE01D3 /* City.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = City.swift; path = ../City.swift; sourceTree = "<group>"; };
+		4BD4B7831CCF41AD00DE01D3 /* cities.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cities.csv; sourceTree = "<group>"; };
 		4BE1043A1CCA1192007220C9 /* RecordCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordCollectionViewCell.swift; sourceTree = "<group>"; };
 		4BE1043C1CCA11B3007220C9 /* RecordCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,6 +103,7 @@
 				4B368C051CC86C3700978B13 /* LaunchScreen.storyboard */,
 				4B2CBC511CCCC8E800D081E0 /* Assets.xcassets */,
 				4B368C081CC86C3700978B13 /* Info.plist */,
+				4BD4B7831CCF41AD00DE01D3 /* cities.csv */,
 				4B3E83C31CC89FB400053278 /* record.csv */,
 			);
 			path = "old-China-photos";
@@ -129,6 +136,8 @@
 		4B368C101CC86F3200978B13 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4BD4B77F1CCF3F7C00DE01D3 /* City+CoreDataProperties.swift */,
+				4BD4B7801CCF3F7C00DE01D3 /* City.swift */,
 				4B368C141CC871FA00978B13 /* Record+CoreDataProperties.swift */,
 				4B368C151CC871FA00978B13 /* Record.swift */,
 				4B368C111CC86F8700978B13 /* DataModel.xcdatamodeld */,
@@ -206,6 +215,7 @@
 			files = (
 				4B368C071CC86C3700978B13 /* LaunchScreen.storyboard in Resources */,
 				4B3E83C41CC89FB400053278 /* record.csv in Resources */,
+				4BD4B7841CCF41AD00DE01D3 /* cities.csv in Resources */,
 				4B2CBC521CCCC8E800D081E0 /* Assets.xcassets in Resources */,
 				4B368C021CC86C3700978B13 /* Main.storyboard in Resources */,
 			);
@@ -220,6 +230,7 @@
 			files = (
 				4BE1043D1CCA11B3007220C9 /* RecordCollectionViewController.swift in Sources */,
 				4B368C161CC871FA00978B13 /* Record+CoreDataProperties.swift in Sources */,
+				4BD4B7821CCF3F7C00DE01D3 /* City.swift in Sources */,
 				4B368C171CC871FA00978B13 /* Record.swift in Sources */,
 				4B14F2CE1CCE09E000FBB54C /* RecordViewController.swift in Sources */,
 				4B2CBC541CCCCBC600D081E0 /* CityCell.swift in Sources */,
@@ -227,6 +238,7 @@
 				4B2CBC5A1CCCCD0200D081E0 /* CityCollectionViewController.swift in Sources */,
 				4B57FCB71CCB5A5700D9836F /* RoundedCorners.swift in Sources */,
 				4B2CBC581CCCCCCD00D081E0 /* CityLayout.swift in Sources */,
+				4BD4B7811CCF3F7C00DE01D3 /* City+CoreDataProperties.swift in Sources */,
 				4B3E83C81CC8B75800053278 /* UIImageView+DownloadImage.swift in Sources */,
 				4B57FCB51CCB523F00D9836F /* RecordCollectionLayout.swift in Sources */,
 				4B368C131CC86F8700978B13 /* DataModel.xcdatamodeld in Sources */,

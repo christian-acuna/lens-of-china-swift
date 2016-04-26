@@ -36,9 +36,9 @@ class CityCell: UICollectionViewCell {
 //        speakerLabel.alpha = delta
     }
     
-    func configureCollectionForCity(city: String, name: String) {
-        imageView.image = UIImage(named: city)
-        cityLabel.text = name
+    func configureCollectionForCity(city: City) {
+        imageView.image = UIImage(named: city.imageURI)
+        cityLabel.text = city.name
     }
     
     

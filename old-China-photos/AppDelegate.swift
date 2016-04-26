@@ -96,7 +96,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // MARK: - CSV Parser Methods
     
-    func parseCSV (contentsOfURL: NSURL, encoding: NSStringEncoding) -> [(recordID:String, primaryTitle:String, makerName: String, type: String,
+    func parseCSVRecord (contentsOfURL: NSURL, encoding: NSStringEncoding) -> [(recordID:String, primaryTitle:String, makerName: String, type: String,
         medium: String, place: String, date: String, source: String, creditLine: String, objectNumber: String, department: String, dimensions: String,
         culture: String, imageThumbURI: String, recordLink: String, latitude: String, longitude: String)]? {
         
@@ -165,6 +165,75 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return items
     }
+    
+//    @NSManaged var latitude: Double
+//    @NSManaged var longitude: Double
+//    @NSManaged var name: String
+//    @NSManaged var imageURI: String
+
+    func parseCSVCity (contentsOfURL: NSURL, encoding: NSStringEncoding) -> [(name:String, imageURI:String, latitude: String, longitude: String)]? {
+            
+            // Load the CSV file and parse it
+            //recordID,PrimaryTitle,MakerName,Type,Medium,Place,Date,Source,CreditLine,ObjectNumber,Department,Dimensions,Culture,imageThumbURI,recordLink
+            let delimiter = ","
+            var items:[(name:String, imageURI:String, latitude: String, longitude: String)]?
+            
+            do {
+                let content = try String(contentsOfURL: contentsOfURL, encoding: encoding)
+                print(content)
+                items = []
+                let lines:[String] = content.componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet()) as [String]
+                
+                for line in lines {
+                    var values:[String] = []
+                    if line != "" {
+                        // For a line with double quotes
+                        // we use NSScanner to perform the parsing
+                        if line.rangeOfString("\"") != nil {
+                            var textToScan:String = line
+                            var value:NSString?
+                            var textScanner:NSScanner = NSScanner(string: textToScan)
+                            while textScanner.string != "" {
+                                
+                                if (textScanner.string as NSString).substringToIndex(1) == "\"" {
+                                    textScanner.scanLocation += 1
+                                    textScanner.scanUpToString("\"", intoString: &value)
+                                    textScanner.scanLocation += 1
+                                } else {
+                                    textScanner.scanUpToString(delimiter, intoString: &value)
+                                }
+                                
+                                // Store the value into the values array
+                                values.append(value as! String)
+                                
+                                // Retrieve the unscanned remainder of the string
+                                if textScanner.scanLocation < textScanner.string.characters.count {
+                                    textToScan = (textScanner.string as NSString).substringFromIndex(textScanner.scanLocation + 1)
+                                } else {
+                                    textToScan = ""
+                                }
+                                textScanner = NSScanner(string: textToScan)
+                            }
+                            
+                            // For a line without double quotes, we can simply separate the string
+                            // by using the delimiter (e.g. comma)
+                        } else  {
+                            values = line.componentsSeparatedByString(delimiter)
+                        }
+                        
+                        // Put the values into the tuple and add it to the items array
+//                       (name:String, imageURI:String, latitude: String, longitude: String)
+                        let item = (name: values[0], imageURI: values[1], latitude: values[2], longitude: values[3])
+                        items?.append(item)
+                    }
+                }
+                
+            } catch {
+                print(error)
+            }
+            
+            return items
+    }
 
     func preloadData() {
         guard let contentsOfURL = NSBundle.mainBundle().URLForResource("record", withExtension: "csv") else {
@@ -172,7 +241,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         removeData()
-        if let items = parseCSV(contentsOfURL, encoding: NSUTF8StringEncoding) {
+        if let items = parseCSVRecord(contentsOfURL, encoding: NSUTF8StringEncoding) {
             //Preload the menu items
             for item in items {
                 let recordItem = NSEntityDescription.insertNewObjectForEntityForName("Record", inManagedObjectContext: managedObjectContext) as! Record
@@ -202,15 +271,50 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
             
         }
+        
+        guard let contentsOfURLForCity = NSBundle.mainBundle().URLForResource("cities", withExtension: "csv") else {
+            return
+        }
+        
+        if let cityItems = parseCSVCity(contentsOfURLForCity, encoding: NSUTF8StringEncoding) {
+            //Preload the menu items
+            for cityItem in cityItems {
+                let managedCityItem = NSEntityDescription.insertNewObjectForEntityForName("City", inManagedObjectContext: managedObjectContext) as! City
+
+                managedCityItem.latitude = (cityItem.latitude as NSString).doubleValue
+                managedCityItem.longitude = (cityItem.longitude as NSString).doubleValue
+                managedCityItem.imageURI = cityItem.imageURI
+                managedCityItem.name = cityItem.name
+                
+                do {
+                    try managedObjectContext.save()
+                } catch {
+                    print(error)
+                }
+            }
+            
+        }
+
     }
     
     func removeData() {
-        let fetchRequest = NSFetchRequest(entityName: "Record")
+        let recordFetchRequest = NSFetchRequest(entityName: "Record")
         
         do {
-            let recordItems = try managedObjectContext.executeFetchRequest(fetchRequest) as! [Record]
+            let recordItems = try managedObjectContext.executeFetchRequest(recordFetchRequest) as! [Record]
             for recordItem in recordItems {
                 managedObjectContext.deleteObject(recordItem)
+            }
+        } catch {
+            print(error)
+        }
+        
+        let cityFetchRequest = NSFetchRequest(entityName: "City")
+        
+        do {
+            let cityItems = try managedObjectContext.executeFetchRequest(cityFetchRequest) as! [City]
+            for cityItem in cityItems {
+                managedObjectContext.deleteObject(cityItem)
             }
         } catch {
             print(error)

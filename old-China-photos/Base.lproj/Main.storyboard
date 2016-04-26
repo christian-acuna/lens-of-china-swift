@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Record Collection View Controller-->
+        <!--Canton-->
         <scene sceneID="2Od-zM-GoG">
             <objects>
                 <collectionViewController id="a2v-wY-CPf" customClass="RecordCollectionViewController" customModule="old_China_photos" customModuleProvider="target" sceneMemberID="viewController">
@@ -124,7 +124,7 @@
                             <outlet property="delegate" destination="a2v-wY-CPf" id="l7X-at-Fhh"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="KqA-aO-nvj">
+                    <navigationItem key="navigationItem" title="Canton" id="KqA-aO-nvj">
                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="aTH-eu-tJW">
                             <connections>
                                 <action selector="doneButtonPressed:" destination="a2v-wY-CPf" id="gPy-Xg-aRT"/>

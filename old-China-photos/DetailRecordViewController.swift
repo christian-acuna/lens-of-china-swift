@@ -80,3 +80,9 @@ extension DetailRecordViewController: UIScrollViewDelegate {
         updateConstraintsForSize(view.bounds.size)
     }
 }
+
+extension DetailRecordViewController: UINavigationBarDelegate {
+    func positionForBar(bar: UIBarPositioning) -> UIBarPosition {
+        return .TopAttached
+    }
+}

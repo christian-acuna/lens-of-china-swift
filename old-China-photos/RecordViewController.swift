@@ -32,6 +32,8 @@ class RecordViewController: UIViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
     }
 
+    @IBAction func zoomToImagePressed(sender: AnyObject) {
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

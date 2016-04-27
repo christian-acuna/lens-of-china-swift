@@ -160,20 +160,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="900"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsMultipleSelection="YES" rowHeight="36" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eMP-JE-JGA">
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hgZ-ce-T9w">
+                                <rect key="frame" x="-6" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="8c7-bn-aRB">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="Oo6-D8-w7J"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsMultipleSelection="YES" rowHeight="36" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eMP-JE-JGA">
                                 <rect key="frame" x="0.0" y="64" width="600" height="836"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <imageView key="tableHeaderView" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="S3B-Va-nQZ">
-                                    <rect key="frame" x="0.0" y="64" width="600" height="350"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="350"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </imageView>
                                 <mapView key="tableFooterView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="SW3-lG-mY3">
-                                    <rect key="frame" x="0.0" y="478" width="600" height="300"/>
+                                    <rect key="frame" x="0.0" y="414" width="600" height="300"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </mapView>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RecordCell" rowHeight="36" id="Zv0-Oh-Fcc" customClass="RecordDetailTableViewCell" customModule="old_China_photos" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="442" width="600" height="36"/>
+                                        <rect key="frame" x="0.0" y="378" width="600" height="36"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zv0-Oh-Fcc" id="Iyy-gR-f17">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="36"/>
@@ -227,6 +235,8 @@
                             <constraint firstAttribute="trailing" secondItem="eMP-JE-JGA" secondAttribute="trailing" id="aDx-6D-xlf"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="900"/>
                     <connections>
@@ -253,12 +263,6 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mcO-wE-hha">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZCD-Zh-YlK">
-                                        <rect key="frame" x="99" y="74" width="42" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="18857901" translatesAutoresizingMaskIntoConstraints="NO" id="M9C-WX-IUM">
                                         <rect key="frame" x="0.0" y="0.0" width="512" height="373"/>
                                     </imageView>
@@ -332,7 +336,6 @@
                         <outlet property="imageViewLeadingConstraint" destination="TuT-ws-7fy" id="5S6-lm-ENM"/>
                         <outlet property="imageViewTopConstraint" destination="GGA-FC-egU" id="kfx-Pg-R6n"/>
                         <outlet property="imageViewTrailingConstraint" destination="ccF-U1-2cZ" id="aMP-0U-Xe8"/>
-                        <outlet property="primaryTitleLabel" destination="ZCD-Zh-YlK" id="88F-gA-rRN"/>
                         <outlet property="scrollView" destination="mcO-wE-hha" id="k0u-wl-mgE"/>
                     </connections>
                 </viewController>

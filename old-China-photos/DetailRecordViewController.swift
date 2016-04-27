@@ -11,7 +11,6 @@ import UIKit
 class DetailRecordViewController: UIViewController {
     
     @IBOutlet weak var detailImageView: UIImageView!
-    @IBOutlet weak var primaryTitleLabel: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var imageViewBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var imageViewLeadingConstraint: NSLayoutConstraint!
@@ -25,8 +24,8 @@ class DetailRecordViewController: UIViewController {
         super.viewDidLoad()
         
         if let record = imageRecord {
-            primaryTitleLabel.text = record.primaryTitle
             detailImageView.image = UIImage(named: record.imageThumbURI)
+            title = record.primaryTitle
         }
         scrollView.delegate = self
         updateConstraintsForSize(view.bounds.size)

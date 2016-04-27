@@ -27,6 +27,8 @@ class MapViewController: UIViewController {
         
         cities = try! managedObjectContext.executeFetchRequest(fetchRequest) as! [City]
         mapView.addAnnotations(cities)
+        mapView.showsCompass = true
+        mapView.showsScale = true
         showLocations()
     }
     
@@ -104,6 +106,11 @@ extension MapViewController: MKMapViewDelegate {
         } else {
             annotationView.annotation = annotation
         }
+        let leftIconView = UIImageView(frame: CGRectMake(0, 0, 53, 53))
+        let imageName = (annotation as! City)
+        leftIconView.image = UIImage(named: imageName.imageURI)
+        annotationView?.leftCalloutAccessoryView = leftIconView
+        
         
         let button = annotationView.rightCalloutAccessoryView as! UIButton
         if let index = cities.indexOf(annotation as! City) {

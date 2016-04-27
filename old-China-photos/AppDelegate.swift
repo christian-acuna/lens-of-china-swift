@@ -36,10 +36,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         preloadData()
-
+        customizeAppearance()
         return true
     }
     
+    func customizeAppearance() {
+        UINavigationBar.appearance().barTintColor = UIColor.blackColor()
+        UINavigationBar.appearance().titleTextAttributes = [ NSForegroundColorAttributeName: UIColor.whiteColor() ]
+        UITabBar.appearance().barTintColor = UIColor.blackColor()
+        //        if let barFont = UIFont(name: "Avenir-Light", size: 24.0) {
+        //            UINavigationBar.appearance().titleTextAttributes =
+        //                [NSForegroundColorAttributeName:UIColor.whiteColor(),
+        //                 NSFontAttributeName:barFont]
+        //        }
+        
+        let tintColor = UIColor(red: 255/255.0, green: 238/255.0, blue: 136/255.0, alpha: 1.0)
+        UITabBar.appearance().tintColor = tintColor
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
+
+        
+    }
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.

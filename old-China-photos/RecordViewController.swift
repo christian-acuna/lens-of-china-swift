@@ -23,6 +23,7 @@ class RecordViewController: UIViewController {
         
         if let record = record {
             recordImageView.image = UIImage(named: record.imageThumbURI)
+            title = record.primaryTitle
         }
         
         tableView.backgroundColor = UIColor(red: 0/255.0, green: 0/255.0, blue: 0/255.0, alpha: 1.0)

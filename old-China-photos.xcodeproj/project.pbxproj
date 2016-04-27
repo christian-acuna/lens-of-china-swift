@@ -29,6 +29,7 @@
 		4BD4B7811CCF3F7C00DE01D3 /* City+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD4B77F1CCF3F7C00DE01D3 /* City+CoreDataProperties.swift */; };
 		4BD4B7821CCF3F7C00DE01D3 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD4B7801CCF3F7C00DE01D3 /* City.swift */; };
 		4BD4B7841CCF41AD00DE01D3 /* cities.csv in Resources */ = {isa = PBXBuildFile; fileRef = 4BD4B7831CCF41AD00DE01D3 /* cities.csv */; };
+		4BD4B7861CCF6DC800DE01D3 /* RecordDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD4B7851CCF6DC800DE01D3 /* RecordDetailTableViewCell.swift */; };
 		4BE1043B1CCA1192007220C9 /* RecordCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE1043A1CCA1192007220C9 /* RecordCollectionViewCell.swift */; };
 		4BE1043D1CCA11B3007220C9 /* RecordCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE1043C1CCA11B3007220C9 /* RecordCollectionViewController.swift */; };
 /* End PBXBuildFile section */
@@ -58,6 +59,7 @@
 		4BD4B77F1CCF3F7C00DE01D3 /* City+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "City+CoreDataProperties.swift"; path = "../City+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		4BD4B7801CCF3F7C00DE01D3 /* City.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = City.swift; path = ../City.swift; sourceTree = "<group>"; };
 		4BD4B7831CCF41AD00DE01D3 /* cities.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cities.csv; sourceTree = "<group>"; };
+		4BD4B7851CCF6DC800DE01D3 /* RecordDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordDetailTableViewCell.swift; sourceTree = "<group>"; };
 		4BE1043A1CCA1192007220C9 /* RecordCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordCollectionViewCell.swift; sourceTree = "<group>"; };
 		4BE1043C1CCA11B3007220C9 /* RecordCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -129,6 +131,7 @@
 				4BE1043A1CCA1192007220C9 /* RecordCollectionViewCell.swift */,
 				4B57FCB61CCB5A5700D9836F /* RoundedCorners.swift */,
 				4B2CBC531CCCCBC600D081E0 /* CityCell.swift */,
+				4BD4B7851CCF6DC800DE01D3 /* RecordDetailTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 				4B3D3C881CCB11B400BB23C4 /* DetailRecordViewController.swift in Sources */,
 				4B368BFB1CC86C3700978B13 /* AppDelegate.swift in Sources */,
 				4BE1043B1CCA1192007220C9 /* RecordCollectionViewCell.swift in Sources */,
+				4BD4B7861CCF6DC800DE01D3 /* RecordDetailTableViewCell.swift in Sources */,
 				4B0FA3371CCE22D7005DD4C9 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

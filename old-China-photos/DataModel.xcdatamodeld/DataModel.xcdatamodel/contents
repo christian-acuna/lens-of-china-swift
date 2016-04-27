@@ -26,7 +26,7 @@
         <attribute name="type" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Record" positionX="-63" positionY="-18" width="128" height="300"/>
         <element name="City" positionX="-63" positionY="108" width="128" height="105"/>
+        <element name="Record" positionX="-63" positionY="-18" width="128" height="300"/>
     </elements>
 </model>

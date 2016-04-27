@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class RecordViewController: UIViewController {
 
@@ -89,7 +90,9 @@ extension RecordViewController: UITableViewDataSource {
                 cell.valueLabel.text = record.culture
             case 11:
                 cell.fieldLabel.text = "Record"
+                cell.fieldLabel.text = "Link To Record"
                 cell.valueLabel.text = record.recordLink
+            
                 
             default:
                 cell.fieldLabel.text = ""
@@ -104,5 +107,17 @@ extension RecordViewController: UITableViewDataSource {
 }
 
 extension RecordViewController: UITableViewDelegate {
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if indexPath.row == 11 {
+            if let record = record, let url = NSURL(string: record.recordLink) {
+                let safariController = SFSafariViewController(URL: url,
+                                                              entersReaderIfAvailable: true)
+                presentViewController(safariController, animated: true, completion: nil)
+                
+            }
+
+        }
+    }
+    
     
 }

@@ -18,9 +18,6 @@ class CityCollectionViewController: UICollectionViewController {
     
     var cities = [City]()
     
-    //    var cities = ["30753001", "18857901", "30757701", "30345401", "30751901"]
-    //    let names = ["Beijing", "Shanghai", "Canton", "Macao", "Tianjin"]
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -41,31 +38,17 @@ class CityCollectionViewController: UICollectionViewController {
         }
         
         collectionView!.decelerationRate = UIScrollViewDecelerationRateFast
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Register cell classes
-        
-        // Do any additional setup after loading the view.
+
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     
     // MARK: UICollectionViewDataSource
     
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
     
     
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
         return cities.count
     }
     
@@ -75,7 +58,6 @@ class CityCollectionViewController: UICollectionViewController {
         let city = cities[indexPath.item]
         
         cell.configureCollectionForCity(city)
-        // Configure the cell
         
         return cell
     }

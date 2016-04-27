@@ -156,16 +156,16 @@
                                 <rect key="frame" x="0.0" y="64" width="600" height="836"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <imageView key="tableHeaderView" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="S3B-Va-nQZ">
-                                    <rect key="frame" x="0.0" y="64" width="600" height="500"/>
+                                    <rect key="frame" x="0.0" y="64" width="600" height="350"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </imageView>
                                 <mapView key="tableFooterView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="SW3-lG-mY3">
-                                    <rect key="frame" x="0.0" y="628" width="600" height="300"/>
+                                    <rect key="frame" x="0.0" y="478" width="600" height="300"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </mapView>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RecordCell" rowHeight="36" id="Zv0-Oh-Fcc" customClass="RecordDetailTableViewCell" customModule="old_China_photos" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="592" width="600" height="36"/>
+                                        <rect key="frame" x="0.0" y="442" width="600" height="36"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zv0-Oh-Fcc" id="Iyy-gR-f17">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="36"/>
@@ -174,31 +174,30 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6dH-xg-AR8">
                                                     <rect key="frame" x="16" y="8" width="568" height="21"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="261" verticalHuggingPriority="251" text="Field" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KT0-wr-Qfo">
-                                                            <rect key="frame" x="0.0" y="0.0" width="147.5" height="21"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="261" verticalHuggingPriority="251" text="Field" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KT0-wr-Qfo">
+                                                            <rect key="frame" x="0.0" y="0.0" width="163" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B15-dx-6Hp">
-                                                            <rect key="frame" x="147.5" y="0.0" width="420.5" height="21"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="21" id="kDz-Sh-07U"/>
-                                                            </constraints>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B15-dx-6Hp">
+                                                            <rect key="frame" x="163" y="0.0" width="406" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstItem="KT0-wr-Qfo" firstAttribute="width" secondItem="B15-dx-6Hp" secondAttribute="width" multiplier="0.35" id="xpZ-Wt-qnR"/>
+                                                        <constraint firstItem="KT0-wr-Qfo" firstAttribute="width" secondItem="B15-dx-6Hp" secondAttribute="width" multiplier="0.4" id="xpZ-Wt-qnR"/>
                                                     </constraints>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="topMargin" secondItem="6dH-xg-AR8" secondAttribute="top" id="G3I-Ox-Lj4"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="6dH-xg-AR8" secondAttribute="trailing" constant="8" id="QFa-rm-ITN"/>
                                                 <constraint firstItem="6dH-xg-AR8" firstAttribute="centerY" secondItem="Iyy-gR-f17" secondAttribute="centerY" id="Rem-6C-IBR"/>
                                                 <constraint firstItem="6dH-xg-AR8" firstAttribute="leading" secondItem="Iyy-gR-f17" secondAttribute="leadingMargin" constant="8" id="XHJ-rT-FlK"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="6dH-xg-AR8" secondAttribute="bottom" constant="-1" id="sBr-6K-HsH"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>

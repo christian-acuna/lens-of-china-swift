@@ -94,10 +94,18 @@ class RecordCollectionViewController: UICollectionViewController {
 extension RecordCollectionViewController: RecordLayoutDelegate {
     func collectionView(collectionView: UICollectionView, heightForPhotoAtIndexPath indexPath: NSIndexPath, withWidth width: CGFloat) -> CGFloat {
         let photoRecord = records[indexPath.item]
-        let photo = UIImage(named: photoRecord.imageThumbURI)!
-        let boundingRect = CGRect(x: 0, y: 0, width: width, height: CGFloat(MAXFLOAT))
-        let rect = AVMakeRectWithAspectRatioInsideRect(photo.size, boundingRect)
-        return rect.height
+        
+        if let photo = UIImage(named: photoRecord.imageThumbURI) {
+            let boundingRect = CGRect(x: 0, y: 0, width: width, height: CGFloat(MAXFLOAT))
+            let rect = AVMakeRectWithAspectRatioInsideRect(photo.size, boundingRect)
+            return rect.height
+        } else {
+            let photo = UIImage(named: "placeholder")!
+            let boundingRect = CGRect(x: 0, y: 0, width: width, height: CGFloat(MAXFLOAT))
+            let rect = AVMakeRectWithAspectRatioInsideRect(photo.size, boundingRect)
+            return rect.height
+        }
+        
     }
     
     func collectionView(collectionView: UICollectionView, heightForAnnotationAtIndexPath indexPath: NSIndexPath, withWidth width: CGFloat) -> CGFloat {

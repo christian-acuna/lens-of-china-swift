@@ -41,16 +41,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func customizeAppearance() {
-        UINavigationBar.appearance().barTintColor = UIColor.blackColor()
+        UINavigationBar.appearance().barTintColor = UIColor(red: 56/255.0, green: 58/255.0, blue: 63/255.0, alpha: 1.0)
         UINavigationBar.appearance().titleTextAttributes = [ NSForegroundColorAttributeName: UIColor.whiteColor() ]
-        UITabBar.appearance().barTintColor = UIColor.blackColor()
+        UITabBar.appearance().barTintColor = UIColor(red: 56/255.0, green: 58/255.0, blue: 63/255.0, alpha: 1.0)
         //        if let barFont = UIFont(name: "Avenir-Light", size: 24.0) {
         //            UINavigationBar.appearance().titleTextAttributes =
         //                [NSForegroundColorAttributeName:UIColor.whiteColor(),
         //                 NSFontAttributeName:barFont]
         //        }
         
-        let tintColor = UIColor(red: 255/255.0, green: 238/255.0, blue: 136/255.0, alpha: 1.0)
+        let tintColor = UIColor(red:0.91, green:0.85, blue:0.65, alpha:1.0)
         UITabBar.appearance().tintColor = tintColor
         UIApplication.sharedApplication().statusBarStyle = .LightContent
 

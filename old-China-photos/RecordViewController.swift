@@ -27,7 +27,7 @@ class RecordViewController: UIViewController {
             title = record.primaryTitle
         }
         
-        tableView.backgroundColor = UIColor(red: 0/255.0, green: 0/255.0, blue: 0/255.0, alpha: 1.0)
+        tableView.backgroundColor = UIColor(red:0.15, green:0.15, blue:0.15, alpha:1.0)
         tableView.estimatedRowHeight = 36.0
         tableView.rowHeight = UITableViewAutomaticDimension
     }

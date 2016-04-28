@@ -14,7 +14,7 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="hU1-nf-67i">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.15294117647058825" green="0.14901960784313725" blue="0.14509803921568626" alpha="1" colorSpace="calibratedRGB"/>
                         <collectionViewLayout key="collectionViewLayout" id="jqo-tM-a7y" customClass="RecordLayout" customModule="old_China_photos" customModuleProvider="target"/>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="ihI-rS-cwm" customClass="RecordCollectionViewCell" customModule="old_China_photos" customModuleProvider="target">
@@ -520,7 +520,7 @@
         <image name="Map" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Qeo-Xu-med"/>
+        <segue reference="0lr-Hz-YsA"/>
     </inferredMetricsTieBreakers>
-    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+    <color key="tintColor" red="0.90980392156862744" green="0.85098039215686272" blue="0.65098039215686276" alpha="1" colorSpace="calibratedRGB"/>
 </document>

@@ -14,6 +14,7 @@ class RecordCollectionViewController: UICollectionViewController {
     
     var records = [Record]()
     var managedObjectContext: NSManagedObjectContext!
+    
     var cityCollectionToView: Int?
     let entityName = "Record"
     let idAttribute: String = "place"

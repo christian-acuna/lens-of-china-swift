@@ -68,6 +68,8 @@ class CityCollectionViewController: UICollectionViewController {
             let navigationController = segue.destinationViewController as! UINavigationController
             let recordCollectionViewController = navigationController.viewControllers[0] as! RecordCollectionViewController
             recordCollectionViewController.managedObjectContext = managedObjectContext
+            let indexPath = collectionView!.indexPathForCell(sender as! CityCell)
+            recordCollectionViewController.cityCollectionToView = indexPath?.row
         }
     }
 }

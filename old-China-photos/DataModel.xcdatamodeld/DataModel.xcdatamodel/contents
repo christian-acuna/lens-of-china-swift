@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15E65" minimumToolsVersion="Xcode 7.0">
     <entity name="City" representedClassName=".City" syncable="YES">
+        <attribute name="cityDescription" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="imageURI" attributeType="String" syncable="YES"/>
         <attribute name="latitude" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="longitude" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
@@ -26,7 +27,7 @@
         <attribute name="type" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="City" positionX="-63" positionY="108" width="128" height="105"/>
+        <element name="City" positionX="-63" positionY="108" width="128" height="120"/>
         <element name="Record" positionX="-63" positionY="-18" width="128" height="300"/>
     </elements>
 </model>

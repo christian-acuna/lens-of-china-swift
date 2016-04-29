@@ -8,10 +8,21 @@
 
 import Foundation
 import CoreData
+import MapKit
 
 
-class Record: NSManagedObject {
+class Record: NSManagedObject, MKAnnotation {
 
-// Insert code here to add functionality to your managed object subclass
+    var coordinate: CLLocationCoordinate2D {
+        return CLLocationCoordinate2DMake(latitude, longitude)
+    }
+    
+    var title: String? {
+        return primaryTitle
+    }
+    
+    var subtitle: String? {
+        return makerName
+    }
         
 }

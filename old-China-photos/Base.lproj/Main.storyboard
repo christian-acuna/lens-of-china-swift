@@ -240,6 +240,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="900"/>
                     <connections>
+                        <outlet property="mapView" destination="SW3-lG-mY3" id="dez-Yp-2Cz"/>
                         <outlet property="recordImageView" destination="S3B-Va-nQZ" id="u8z-hE-uza"/>
                         <outlet property="tableView" destination="eMP-JE-JGA" id="AAc-A0-ntE"/>
                     </connections>

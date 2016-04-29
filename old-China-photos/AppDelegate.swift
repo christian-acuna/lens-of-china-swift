@@ -189,12 +189,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //    @NSManaged var name: String
 //    @NSManaged var imageURI: String
 
-    func parseCSVCity (contentsOfURL: NSURL, encoding: NSStringEncoding) -> [(name:String, imageURI:String, latitude: String, longitude: String)]? {
+    func parseCSVCity (contentsOfURL: NSURL, encoding: NSStringEncoding) -> [(name:String, imageURI:String, latitude: String, longitude: String, cityDescription: String)]? {
             
             // Load the CSV file and parse it
             //recordID,PrimaryTitle,MakerName,Type,Medium,Place,Date,Source,CreditLine,ObjectNumber,Department,Dimensions,Culture,imageThumbURI,recordLink
             let delimiter = ","
-            var items:[(name:String, imageURI:String, latitude: String, longitude: String)]?
+            var items:[(name:String, imageURI:String, latitude: String, longitude: String, cityDescription: String)]?
             
             do {
                 let content = try String(contentsOfURL: contentsOfURL, encoding: encoding)
@@ -241,7 +241,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                         
                         // Put the values into the tuple and add it to the items array
 //                       (name:String, imageURI:String, latitude: String, longitude: String)
-                        let item = (name: values[0], imageURI: values[1], latitude: values[2], longitude: values[3])
+                        let item = (name: values[0], imageURI: values[1], latitude: values[2], longitude: values[3], cityDescription: values[4])
                         items?.append(item)
                     }
                 }
@@ -303,6 +303,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 managedCityItem.longitude = (cityItem.longitude as NSString).doubleValue
                 managedCityItem.imageURI = cityItem.imageURI
                 managedCityItem.name = cityItem.name
+                managedCityItem.cityDescription = cityItem.cityDescription
                 
                 do {
                     try managedObjectContext.save()

@@ -22,7 +22,7 @@ class City: NSManagedObject, MKAnnotation {
     }
     
     var subtitle: String? {
-        return "This is a test"
+        return cityDescription
     }
     
     

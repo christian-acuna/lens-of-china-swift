@@ -31,7 +31,7 @@ class MapViewController: UIViewController {
         mapView.showsScale = true
         showLocations()
     }
-    
+
     @IBAction func showLocations() {
         let region = regionForAnnotations(cities)
         mapView.setRegion(region, animated: true)

@@ -18,5 +18,6 @@ extension City {
     @NSManaged var longitude: Double
     @NSManaged var name: String
     @NSManaged var imageURI: String
+    @NSManaged var cityDescription: String
 
 }

@@ -8,28 +8,40 @@
 
 import UIKit
 import SafariServices
+import MapKit
 
 class RecordViewController: UIViewController {
 
     
     @IBOutlet weak var recordImageView: UIImageView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var mapView: MKMapView!
     
     var record: Record?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.automaticallyAdjustsScrollViewInsets = false
-        
+        mapView.delegate = self
+        showRecord()
         
         if let record = record {
             recordImageView.image = UIImage(named: record.imageThumbURI)
             title = record.primaryTitle
+            mapView.addAnnotation(record)
         }
         
         tableView.backgroundColor = UIColor(red:0.15, green:0.15, blue:0.15, alpha:1.0)
         tableView.estimatedRowHeight = 36.0
         tableView.rowHeight = UITableViewAutomaticDimension
+        showRecord()
+    }
+    
+    func showRecord() {
+        if let record = record {
+            let region = MKCoordinateRegionMakeWithDistance(record.coordinate, 100000, 100000)
+            mapView.setRegion(region, animated: true)
+        }
     }
 
     @IBAction func zoomToImagePressed(sender: AnyObject) {
@@ -90,10 +102,10 @@ extension RecordViewController: UITableViewDataSource {
             case 10:
                 cell.fieldLabel.text = "Culture"
                 cell.valueLabel.text = record.culture
-            case 11:
-                cell.fieldLabel.text = "Record"
-                cell.fieldLabel.text = "Link To Record"
-                cell.valueLabel.text = record.recordLink
+//            case 11:
+//                cell.fieldLabel.text = "Record"
+//                cell.fieldLabel.text = "Link To Record"
+//                cell.valueLabel.text = record.recordLink
             
                 
             default:
@@ -127,5 +139,9 @@ extension RecordViewController: UITableViewDelegate {
         // Display the menu
         self.presentViewController(optionMenu, animated: true, completion: nil)
     }
+    
+}
+
+extension RecordViewController: MKMapViewDelegate {
     
 }

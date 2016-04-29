@@ -29,6 +29,9 @@ class RecordCollectionViewController: UICollectionViewController {
             case 0:
                 placePredicateFilter = "Pekin"
                 title = "Beijing"
+            case 4:
+                placePredicateFilter = "Tianjin"
+                title = "Tianjin"
             default:
                 placePredicateFilter = "Canton"
                 title = "Canton"

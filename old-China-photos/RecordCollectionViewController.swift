@@ -15,28 +15,31 @@ class RecordCollectionViewController: UICollectionViewController {
     var records = [Record]()
     var managedObjectContext: NSManagedObjectContext!
     var cityCollectionToView: Int?
+    let entityName = "Record"
+    let idAttribute: String = "place"
+    var placePredicateFilter = "Pekin"
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
         if let city = cityCollectionToView {
             print("*** The City number is \(city)")
+            
+            switch city {
+            case 0:
+                placePredicateFilter = "Pekin"
+                title = "Beijing"
+            default:
+                placePredicateFilter = "Canton"
+                title = "Canton"
+            }
         }
         
-        let fetchRequest = NSFetchRequest()
-        let entity = NSEntityDescription.entityForName("Record", inManagedObjectContext: managedObjectContext)
-        fetchRequest.entity = entity
+        let placePredicate = NSPredicate(format: "%K CONTAINS[cd] %@", idAttribute, placePredicateFilter)
         
         let sortDescriptor = NSSortDescriptor(key: "primaryTitle", ascending: true)
-        fetchRequest.sortDescriptors = [sortDescriptor]
-        
-        do {
-            let foundObjects = try managedObjectContext.executeFetchRequest(fetchRequest)
-            records = foundObjects as! [Record]
-        } catch {
-            print(error)
+        if let results = getData([sortDescriptor], predicate: placePredicate) {
+            records = results
         }
         
         let size = CGRectGetWidth(collectionView!.bounds) / 2
@@ -46,6 +49,20 @@ class RecordCollectionViewController: UICollectionViewController {
         layout.delegate = self
         layout.numberOfColumns = 2
         layout.cellPadding = 5
+    }
+    
+    func getData(sort:[NSSortDescriptor], predicate: NSPredicate) -> [Record]? {
+        let fetchRequest = NSFetchRequest()
+        let entity = NSEntityDescription.entityForName(entityName, inManagedObjectContext: managedObjectContext)
+        fetchRequest.entity = entity
+        fetchRequest.predicate = predicate
+        fetchRequest.sortDescriptors = sort
+        
+        if let results = try? managedObjectContext.executeFetchRequest(fetchRequest) as! [Record] {
+            return results
+        } else {
+            return nil
+        }
     }
 
     override func didReceiveMemoryWarning() {

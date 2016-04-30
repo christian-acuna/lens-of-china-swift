@@ -171,7 +171,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsMultipleSelection="YES" rowHeight="36" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eMP-JE-JGA">
                                 <rect key="frame" x="0.0" y="64" width="600" height="836"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <imageView key="tableHeaderView" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="S3B-Va-nQZ">
+                                <imageView key="tableHeaderView" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="S3B-Va-nQZ">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="350"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </imageView>
@@ -243,6 +243,7 @@
                         <outlet property="mapView" destination="SW3-lG-mY3" id="dez-Yp-2Cz"/>
                         <outlet property="recordImageView" destination="S3B-Va-nQZ" id="u8z-hE-uza"/>
                         <outlet property="tableView" destination="eMP-JE-JGA" id="AAc-A0-ntE"/>
+                        <segue destination="Uch-1j-a47" kind="presentation" identifier="recordToZoom" id="SKO-bY-IA3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zb0-py-lok" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -275,7 +276,7 @@
                                     <constraint firstAttribute="trailing" secondItem="M9C-WX-IUM" secondAttribute="trailing" id="ccF-U1-2cZ"/>
                                 </constraints>
                             </scrollView>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9uS-p9-7ht">
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9uS-p9-7ht">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="NMh-k9-FBF"/>
@@ -283,7 +284,7 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="ig7-1d-Acb"/>
                                 </constraints>
                                 <items>
-                                    <navigationItem title="Title" id="KdE-PU-xs5">
+                                    <navigationItem prompt="" id="KdE-PU-xs5">
                                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="6Kf-Wh-X6j">
                                             <connections>
                                                 <action selector="closeView:" destination="Uch-1j-a47" id="yIa-yQ-e31"/>
@@ -342,7 +343,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RXg-tS-RoR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4074" y="488"/>
+            <point key="canvasLocation" x="4184" y="460"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -421,7 +422,7 @@
         <scene sceneID="sCP-mB-5ew">
             <objects>
                 <collectionViewController id="Y2Z-dg-bv3" customClass="CityCollectionViewController" customModule="old_China_photos" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="C6b-k1-xQr">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" delaysContentTouches="NO" dataMode="prototypes" id="C6b-k1-xQr">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <collectionViewLayout key="collectionViewLayout" id="IMF-Uh-uaV" customClass="CityLayout" customModule="old_China_photos" customModuleProvider="target"/>
@@ -521,7 +522,7 @@
         <image name="Map" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Qeo-Xu-med"/>
+        <segue reference="0lr-Hz-YsA"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.90980392156862744" green="0.85098039215686272" blue="0.65098039215686276" alpha="1" colorSpace="calibratedRGB"/>
 </document>

@@ -25,7 +25,6 @@ class DetailRecordViewController: UIViewController {
         
         if let record = imageRecord {
             detailImageView.image = UIImage(named: record.imageThumbURI)
-            title = record.primaryTitle
         }
         scrollView.delegate = self
         updateConstraintsForSize(view.bounds.size)
@@ -53,6 +52,7 @@ class DetailRecordViewController: UIViewController {
         let minScale = min(widthScale, heightScale)
         
         scrollView.minimumZoomScale = minScale
+        
         scrollView.zoomScale = minScale
     }
     

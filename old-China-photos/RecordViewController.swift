@@ -35,6 +35,15 @@ class RecordViewController: UIViewController {
         tableView.estimatedRowHeight = 36.0
         tableView.rowHeight = UITableViewAutomaticDimension
         showRecord()
+        
+        
+        let tapGestureRecognizer = UITapGestureRecognizer(target:self, action:#selector(RecordViewController.imageTapped(_:)))
+        recordImageView.userInteractionEnabled = true
+        recordImageView.addGestureRecognizer(tapGestureRecognizer)
+    }
+    
+    func imageTapped(sender: UIImageView) {
+        performSegueWithIdentifier("recordToZoom", sender: sender)
     }
     
     func showRecord() {

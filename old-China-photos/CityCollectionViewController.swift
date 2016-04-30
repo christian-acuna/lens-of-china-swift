@@ -70,6 +70,7 @@ class CityCollectionViewController: UICollectionViewController {
             recordCollectionViewController.managedObjectContext = managedObjectContext
             let indexPath = collectionView!.indexPathForCell(sender as! CityCell)
             recordCollectionViewController.cityCollectionToView = indexPath?.row
-        }
+       }
     }
+
 }

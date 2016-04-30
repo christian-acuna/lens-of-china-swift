@@ -521,7 +521,7 @@
         <image name="Map" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="0lr-Hz-YsA"/>
+        <segue reference="Qeo-Xu-med"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.90980392156862744" green="0.85098039215686272" blue="0.65098039215686276" alpha="1" colorSpace="calibratedRGB"/>
 </document>

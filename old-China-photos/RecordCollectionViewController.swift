@@ -30,12 +30,21 @@ class RecordCollectionViewController: UICollectionViewController {
             case 0:
                 placePredicateFilter = "Pekin"
                 title = "Beijing"
+            case 1:
+                placePredicateFilter = "Canton"
+                title = "Canton (Guangzhou)"
+            case 2:
+                placePredicateFilter = "Macao"
+                title = "Macao (Aomen)"
+            case 3:
+                placePredicateFilter = "Shanghai"
+                title = "Shanghai"
             case 4:
                 placePredicateFilter = "Tianjin"
                 title = "Tianjin"
             default:
-                placePredicateFilter = "Canton"
-                title = "Canton"
+                placePredicateFilter = "Tianjin"
+                title = "Tianjin"
             }
         }
         

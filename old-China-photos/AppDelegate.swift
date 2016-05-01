@@ -35,7 +35,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            recordCollectionViewController.managedObjectContext = managedObjectContext
         }
         
-        preloadData()
+        let defaults = NSUserDefaults.standardUserDefaults()
+        let isPreloaded = defaults.boolForKey("isPreloaded")
+        if !isPreloaded {
+            preloadData()
+            defaults.setBool(true, forKey: "isPreloaded")
+        }
+        
         customizeAppearance()
         return true
     }

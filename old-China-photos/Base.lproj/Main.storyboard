@@ -276,7 +276,7 @@
                                     <constraint firstAttribute="trailing" secondItem="M9C-WX-IUM" secondAttribute="trailing" id="ccF-U1-2cZ"/>
                                 </constraints>
                             </scrollView>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9uS-p9-7ht">
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9uS-p9-7ht">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="NMh-k9-FBF"/>
@@ -328,6 +328,7 @@
                                 <exclude reference="zHK-xh-2dQ"/>
                                 <exclude reference="QeE-0d-sky"/>
                                 <exclude reference="RvQ-DB-JhM"/>
+                                <exclude reference="qxY-vk-z5S"/>
                                 <exclude reference="tMK-pO-m8p"/>
                                 <exclude reference="egK-NM-eIK"/>
                             </mask>

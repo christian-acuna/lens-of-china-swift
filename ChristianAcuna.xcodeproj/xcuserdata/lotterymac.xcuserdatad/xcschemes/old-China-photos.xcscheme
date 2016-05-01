@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4B368BF61CC86C3700978B13"
-               BuildableName = "old-China-photos.app"
-               BlueprintName = "old-China-photos"
-               ReferencedContainer = "container:old-China-photos.xcodeproj">
+               BuildableName = "ChristianAcuna.app"
+               BlueprintName = "ChristianAcuna"
+               ReferencedContainer = "container:ChristianAcuna.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4B368BF61CC86C3700978B13"
-            BuildableName = "old-China-photos.app"
-            BlueprintName = "old-China-photos"
-            ReferencedContainer = "container:old-China-photos.xcodeproj">
+            BuildableName = "ChristianAcuna.app"
+            BlueprintName = "ChristianAcuna"
+            ReferencedContainer = "container:ChristianAcuna.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4B368BF61CC86C3700978B13"
-            BuildableName = "old-China-photos.app"
-            BlueprintName = "old-China-photos"
-            ReferencedContainer = "container:old-China-photos.xcodeproj">
+            BuildableName = "ChristianAcuna.app"
+            BlueprintName = "ChristianAcuna"
+            ReferencedContainer = "container:ChristianAcuna.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <CommandLineArguments>
@@ -81,9 +81,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4B368BF61CC86C3700978B13"
-            BuildableName = "old-China-photos.app"
-            BlueprintName = "old-China-photos"
-            ReferencedContainer = "container:old-China-photos.xcodeproj">
+            BuildableName = "ChristianAcuna.app"
+            BlueprintName = "ChristianAcuna"
+            ReferencedContainer = "container:ChristianAcuna.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

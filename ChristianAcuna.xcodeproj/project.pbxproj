@@ -42,7 +42,7 @@
 		4B2CBC531CCCCBC600D081E0 /* CityCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityCell.swift; sourceTree = "<group>"; };
 		4B2CBC571CCCCCCD00D081E0 /* CityLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityLayout.swift; sourceTree = "<group>"; };
 		4B2CBC591CCCCD0200D081E0 /* CityCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityCollectionViewController.swift; sourceTree = "<group>"; };
-		4B368BF71CC86C3700978B13 /* old-China-photos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "old-China-photos.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B368BF71CC86C3700978B13 /* ChristianAcuna.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChristianAcuna.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B368BFA1CC86C3700978B13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4B368C011CC86C3700978B13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4B368C061CC86C3700978B13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -88,7 +88,7 @@
 		4B368BF81CC86C3700978B13 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4B368BF71CC86C3700978B13 /* old-China-photos.app */,
+				4B368BF71CC86C3700978B13 /* ChristianAcuna.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -160,9 +160,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4B368BF61CC86C3700978B13 /* old-China-photos */ = {
+		4B368BF61CC86C3700978B13 /* ChristianAcuna */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4B368C0B1CC86C3700978B13 /* Build configuration list for PBXNativeTarget "old-China-photos" */;
+			buildConfigurationList = 4B368C0B1CC86C3700978B13 /* Build configuration list for PBXNativeTarget "ChristianAcuna" */;
 			buildPhases = (
 				4B368BF31CC86C3700978B13 /* Sources */,
 				4B368BF41CC86C3700978B13 /* Frameworks */,
@@ -172,9 +172,9 @@
 			);
 			dependencies = (
 			);
-			name = "old-China-photos";
+			name = ChristianAcuna;
 			productName = "old-China-photos";
-			productReference = 4B368BF71CC86C3700978B13 /* old-China-photos.app */;
+			productReference = 4B368BF71CC86C3700978B13 /* ChristianAcuna.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -193,7 +193,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4B368BF21CC86C3700978B13 /* Build configuration list for PBXProject "old-China-photos" */;
+			buildConfigurationList = 4B368BF21CC86C3700978B13 /* Build configuration list for PBXProject "ChristianAcuna" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -206,7 +206,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4B368BF61CC86C3700978B13 /* old-China-photos */,
+				4B368BF61CC86C3700978B13 /* ChristianAcuna */,
 			);
 		};
 /* End PBXProject section */
@@ -367,7 +367,7 @@
 				INFOPLIST_FILE = "old-China-photos/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.crossroads.old-China-photos";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ChristianAcuna;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -379,7 +379,7 @@
 				INFOPLIST_FILE = "old-China-photos/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.crossroads.old-China-photos";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ChristianAcuna;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -387,7 +387,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4B368BF21CC86C3700978B13 /* Build configuration list for PBXProject "old-China-photos" */ = {
+		4B368BF21CC86C3700978B13 /* Build configuration list for PBXProject "ChristianAcuna" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4B368C091CC86C3700978B13 /* Debug */,
@@ -396,7 +396,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4B368C0B1CC86C3700978B13 /* Build configuration list for PBXNativeTarget "old-China-photos" */ = {
+		4B368C0B1CC86C3700978B13 /* Build configuration list for PBXNativeTarget "ChristianAcuna" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4B368C0C1CC86C3700978B13 /* Debug */,

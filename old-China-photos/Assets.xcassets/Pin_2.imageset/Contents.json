@@ -2,11 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "china map_invert.png",
+      "filename" : "Pin_2.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "Pin_2@2x.png",
       "scale" : "2x"
     },
     {

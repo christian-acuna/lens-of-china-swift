@@ -2,11 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "china map.png",
+      "filename" : "73.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "73@2x.png",
       "scale" : "2x"
     },
     {

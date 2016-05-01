@@ -24,12 +24,10 @@ class RecordCollectionViewController: UICollectionViewController {
         super.viewDidLoad()
         
         if let city = cityCollectionToView {
-            print("*** The City number is \(city)")
-            
             switch city {
             case 0:
                 placePredicateFilter = "Pekin"
-                title = "Beijing"
+                title = "Pekin (Beijing)"
             case 1:
                 placePredicateFilter = "Canton"
                 title = "Canton (Guangzhou)"

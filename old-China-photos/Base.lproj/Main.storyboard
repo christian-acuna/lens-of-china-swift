@@ -10,21 +10,21 @@
         <!--Canton-->
         <scene sceneID="2Od-zM-GoG">
             <objects>
-                <collectionViewController id="a2v-wY-CPf" customClass="RecordCollectionViewController" customModule="old_China_photos" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="a2v-wY-CPf" customClass="RecordCollectionViewController" customModule="ChristianAcuna" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="hU1-nf-67i">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.15294117647058825" green="0.14901960784313725" blue="0.14509803921568626" alpha="1" colorSpace="calibratedRGB"/>
-                        <collectionViewLayout key="collectionViewLayout" id="jqo-tM-a7y" customClass="RecordLayout" customModule="old_China_photos" customModuleProvider="target"/>
+                        <collectionViewLayout key="collectionViewLayout" id="jqo-tM-a7y" customClass="RecordLayout" customModule="ChristianAcuna" customModuleProvider="target"/>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="ihI-rS-cwm" customClass="RecordCollectionViewCell" customModule="old_China_photos" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="ihI-rS-cwm" customClass="RecordCollectionViewCell" customModule="ChristianAcuna" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="64" width="200" height="260"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="200" height="260"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JdQ-kE-cff" customClass="RoundedCornersView" customModule="old_China_photos" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JdQ-kE-cff" customClass="RoundedCornersView" customModule="ChristianAcuna" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yBi-FU-CeY">
@@ -151,7 +151,7 @@
         <!--Record View Controller-->
         <scene sceneID="hyu-Sb-iOz">
             <objects>
-                <viewController id="ZlY-3m-kmg" customClass="RecordViewController" customModule="old_China_photos" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ZlY-3m-kmg" customClass="RecordViewController" customModule="ChristianAcuna" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="D5S-gI-I6x"/>
                         <viewControllerLayoutGuide type="bottom" id="alM-1u-Nnn"/>
@@ -180,7 +180,7 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </mapView>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RecordCell" rowHeight="36" id="Zv0-Oh-Fcc" customClass="RecordDetailTableViewCell" customModule="old_China_photos" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RecordCell" rowHeight="36" id="Zv0-Oh-Fcc" customClass="RecordDetailTableViewCell" customModule="ChristianAcuna" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="378" width="600" height="36"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zv0-Oh-Fcc" id="Iyy-gR-f17">
@@ -253,7 +253,7 @@
         <!--Detail Record View Controller-->
         <scene sceneID="cQ0-hi-vs8">
             <objects>
-                <viewController id="Uch-1j-a47" customClass="DetailRecordViewController" customModule="old_China_photos" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Uch-1j-a47" customClass="DetailRecordViewController" customModule="ChristianAcuna" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JH2-fw-Szx"/>
                         <viewControllerLayoutGuide type="bottom" id="BrA-h7-iSq"/>
@@ -265,7 +265,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mcO-wE-hha">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="7ACF84F9-7D8C-4C97-AD50-DA6F81F4E8FC" translatesAutoresizingMaskIntoConstraints="NO" id="M9C-WX-IUM">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="72D91D2C-A21B-4750-9F53-F44C9A6E1E29" translatesAutoresizingMaskIntoConstraints="NO" id="M9C-WX-IUM">
                                         <rect key="frame" x="0.0" y="0.0" width="512" height="373"/>
                                     </imageView>
                                 </subviews>
@@ -367,7 +367,7 @@
         <!--Map-->
         <scene sceneID="idN-x4-ygQ">
             <objects>
-                <viewController id="IKG-OB-8Id" customClass="MapViewController" customModule="old_China_photos" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="IKG-OB-8Id" customClass="MapViewController" customModule="ChristianAcuna" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QA4-9S-vWS"/>
                         <viewControllerLayoutGuide type="bottom" id="XxR-PN-Kyd"/>
@@ -406,7 +406,7 @@
                             <constraint firstItem="wWV-bI-uiy" firstAttribute="top" secondItem="2FR-dj-aCa" secondAttribute="top" id="yDm-y8-6Gd"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Map" image="china map" selectedImage="china map_invert" id="i3o-3L-GQn">
+                    <tabBarItem key="tabBarItem" title="Map" image="Pin_2" selectedImage="Pin_2_sel" id="i3o-3L-GQn">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
                     <connections>
@@ -418,17 +418,17 @@
             </objects>
             <point key="canvasLocation" x="750" y="-250"/>
         </scene>
-        <!--City Collection View Controller-->
+        <!--Cities-->
         <scene sceneID="sCP-mB-5ew">
             <objects>
-                <collectionViewController id="Y2Z-dg-bv3" customClass="CityCollectionViewController" customModule="old_China_photos" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" delaysContentTouches="NO" dataMode="prototypes" id="C6b-k1-xQr">
+                <collectionViewController id="Y2Z-dg-bv3" customClass="CityCollectionViewController" customModule="ChristianAcuna" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="C6b-k1-xQr">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.1764705882" green="0.1843137255" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                        <collectionViewLayout key="collectionViewLayout" id="IMF-Uh-uaV" customClass="CityLayout" customModule="old_China_photos" customModuleProvider="target"/>
+                        <collectionViewLayout key="collectionViewLayout" id="IMF-Uh-uaV" customClass="CityLayout" customModule="ChristianAcuna" customModuleProvider="target"/>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CityCell" id="sck-0Y-mb0" customClass="CityCell" customModule="old_China_photos" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CityCell" id="sck-0Y-mb0" customClass="CityCell" customModule="ChristianAcuna" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -491,7 +491,7 @@
                             <outlet property="delegate" destination="Y2Z-dg-bv3" id="SEc-24-Izp"/>
                         </connections>
                     </collectionView>
-                    <tabBarItem key="tabBarItem" systemItem="more" id="AfQ-mF-hMn"/>
+                    <tabBarItem key="tabBarItem" title="Cities" image="picture icon" id="AfQ-mF-hMn"/>
                     <navigationItem key="navigationItem" id="CJ9-Kx-auU"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RAK-Yf-1WJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -518,7 +518,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="7ACF84F9-7D8C-4C97-AD50-DA6F81F4E8FC" width="512" height="373">
+        <image name="72D91D2C-A21B-4750-9F53-F44C9A6E1E29" width="512" height="373">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -13304,11 +13304,12 @@ AAuyOwALskAAC7JCAAuyRAALskkAC7JRAAuyVAALslkAC7JhAAuyZAALsnYAC7J5AAuyfgAAAAAAAAQB
 AAAAAAAAAEEAAAAAAAAAAAAAAAAAC7KAA
 </mutableData>
         </image>
-        <image name="china map" width="125" height="125"/>
-        <image name="china map_invert" width="125" height="125"/>
+        <image name="Pin_2" width="18" height="29"/>
+        <image name="Pin_2_sel" width="18" height="29"/>
+        <image name="picture icon" width="24" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Qeo-Xu-med"/>
+        <segue reference="0lr-Hz-YsA"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.90980392156862744" green="0.85098039215686272" blue="0.65098039215686276" alpha="1" colorSpace="calibratedRGB"/>
 </document>

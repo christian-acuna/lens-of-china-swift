@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4B368BF61CC86C3700978B13"
                BuildableName = "ChristianAcuna.app"
-               BlueprintName = "ChristianAcuna"
-               ReferencedContainer = "container:ChristianAcuna.xcodeproj">
+               BlueprintName = "lens-of-china"
+               ReferencedContainer = "container:lens-of-china.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,8 +34,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4B368BF61CC86C3700978B13"
             BuildableName = "ChristianAcuna.app"
-            BlueprintName = "ChristianAcuna"
-            ReferencedContainer = "container:ChristianAcuna.xcodeproj">
+            BlueprintName = "lens-of-china"
+            ReferencedContainer = "container:lens-of-china.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4B368BF61CC86C3700978B13"
-            BuildableName = "ChristianAcuna.app"
-            BlueprintName = "ChristianAcuna"
-            ReferencedContainer = "container:ChristianAcuna.xcodeproj">
+            BuildableName = "lens-of-china.app"
+            BlueprintName = "lens-of-china"
+            ReferencedContainer = "container:lens-of-china.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <CommandLineArguments>
@@ -82,8 +82,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4B368BF61CC86C3700978B13"
             BuildableName = "ChristianAcuna.app"
-            BlueprintName = "ChristianAcuna"
-            ReferencedContainer = "container:ChristianAcuna.xcodeproj">
+            BlueprintName = "lens-of-china"
+            ReferencedContainer = "container:lens-of-china.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

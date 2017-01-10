@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4B368BF61CC86C3700978B13"
-               BuildableName = "ChristianAcuna.app"
+               BuildableName = "lens-of-china.app"
                BlueprintName = "lens-of-china"
                ReferencedContainer = "container:lens-of-china.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4B368BF61CC86C3700978B13"
-            BuildableName = "ChristianAcuna.app"
+            BuildableName = "lens-of-china.app"
             BlueprintName = "lens-of-china"
             ReferencedContainer = "container:lens-of-china.xcodeproj">
          </BuildableReference>
@@ -81,7 +81,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4B368BF61CC86C3700978B13"
-            BuildableName = "ChristianAcuna.app"
+            BuildableName = "lens-of-china.app"
             BlueprintName = "lens-of-china"
             ReferencedContainer = "container:lens-of-china.xcodeproj">
          </BuildableReference>

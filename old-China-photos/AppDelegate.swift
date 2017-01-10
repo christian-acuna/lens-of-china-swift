@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
+        
         let tabBarController = window!.rootViewController as! UITabBarController
         if let tabBarControllers = tabBarController.viewControllers {
 //            let navigationController = tabBarControllers[1] as!
@@ -42,7 +43,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             defaults.setBool(true, forKey: "isPreloaded")
         }
         
+        Lookback.setupWithAppToken("ZfdajLfRCCTB55w9u")
+        Lookback.sharedLookback().shakeToRecord = true
+        Lookback.sharedLookback().feedbackBubbleVisible = true
+        
+        
+        
         customizeAppearance()
+        
+        
         return true
     }
     

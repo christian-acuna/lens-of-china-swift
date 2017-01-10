@@ -32,11 +32,13 @@
 		4BD4B7861CCF6DC800DE01D3 /* RecordDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD4B7851CCF6DC800DE01D3 /* RecordDetailTableViewCell.swift */; };
 		4BE1043B1CCA1192007220C9 /* RecordCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE1043A1CCA1192007220C9 /* RecordCollectionViewCell.swift */; };
 		4BE1043D1CCA11B3007220C9 /* RecordCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE1043C1CCA11B3007220C9 /* RecordCollectionViewController.swift */; };
+		CD4E1A8B15BA2B9BBAA1C825 /* Pods_lens_of_china.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62BDC905BE6C09194F1A16C3 /* Pods_lens_of_china.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4B0FA3341CCE2290005DD4C9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		4B0FA3361CCE22D7005DD4C9 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		4B125ED91CE46DB400329E8E /* lens-of-china-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "lens-of-china-Bridging-Header.h"; sourceTree = "<group>"; };
 		4B14F2CD1CCE09E000FBB54C /* RecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 		4B2CBC511CCCC8E800D081E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B2CBC531CCCCBC600D081E0 /* CityCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityCell.swift; sourceTree = "<group>"; };
@@ -62,6 +64,9 @@
 		4BD4B7851CCF6DC800DE01D3 /* RecordDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordDetailTableViewCell.swift; sourceTree = "<group>"; };
 		4BE1043A1CCA1192007220C9 /* RecordCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordCollectionViewCell.swift; sourceTree = "<group>"; };
 		4BE1043C1CCA11B3007220C9 /* RecordCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordCollectionViewController.swift; sourceTree = "<group>"; };
+		62BDC905BE6C09194F1A16C3 /* Pods_lens_of_china.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_lens_of_china.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A00AA50859F8A7B00A701215 /* Pods-lens-of-china.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lens-of-china.debug.xcconfig"; path = "Pods/Target Support Files/Pods-lens-of-china/Pods-lens-of-china.debug.xcconfig"; sourceTree = "<group>"; };
+		B713AA0E69108693E398B292 /* Pods-lens-of-china.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lens-of-china.release.xcconfig"; path = "Pods/Target Support Files/Pods-lens-of-china/Pods-lens-of-china.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,18 +75,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B0FA3351CCE2290005DD4C9 /* MapKit.framework in Frameworks */,
+				CD4E1A8B15BA2B9BBAA1C825 /* Pods_lens_of_china.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		323C664A05E5EDF20F610A05 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A00AA50859F8A7B00A701215 /* Pods-lens-of-china.debug.xcconfig */,
+				B713AA0E69108693E398B292 /* Pods-lens-of-china.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		4B368BEE1CC86C3700978B13 = {
 			isa = PBXGroup;
 			children = (
 				4B0FA3341CCE2290005DD4C9 /* MapKit.framework */,
 				4B368BF91CC86C3700978B13 /* old-China-photos */,
 				4B368BF81CC86C3700978B13 /* Products */,
+				323C664A05E5EDF20F610A05 /* Pods */,
+				A7CBC2B47A2A49CE0B99DEB0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,6 +124,7 @@
 				4B368C081CC86C3700978B13 /* Info.plist */,
 				4BD4B7831CCF41AD00DE01D3 /* cities.csv */,
 				4B3E83C31CC89FB400053278 /* record.csv */,
+				4B125ED91CE46DB400329E8E /* lens-of-china-Bridging-Header.h */,
 			);
 			path = "old-China-photos";
 			sourceTree = "<group>";
@@ -157,6 +175,14 @@
 			name = Layout;
 			sourceTree = "<group>";
 		};
+		A7CBC2B47A2A49CE0B99DEB0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				62BDC905BE6C09194F1A16C3 /* Pods_lens_of_china.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -164,9 +190,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4B368C0B1CC86C3700978B13 /* Build configuration list for PBXNativeTarget "lens-of-china" */;
 			buildPhases = (
+				AA056FB0E5784A28BD64702F /* Check Pods Manifest.lock */,
 				4B368BF31CC86C3700978B13 /* Sources */,
 				4B368BF41CC86C3700978B13 /* Frameworks */,
 				4B368BF51CC86C3700978B13 /* Resources */,
+				808CD3A227268D4848DAE420 /* Embed Pods Frameworks */,
+				EF0A4C55702EE98E858AE2BD /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -225,6 +254,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		808CD3A227268D4848DAE420 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-lens-of-china/Pods-lens-of-china-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AA056FB0E5784A28BD64702F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EF0A4C55702EE98E858AE2BD /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-lens-of-china/Pods-lens-of-china-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4B368BF31CC86C3700978B13 /* Sources */ = {
@@ -362,26 +439,33 @@
 		};
 		4B368C0C1CC86C3700978B13 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A00AA50859F8A7B00A701215 /* Pods-lens-of-china.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				INFOPLIST_FILE = "old-China-photos/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.crossroads.old-China-photos";
 				PRODUCT_NAME = "lens-of-china";
+				SWIFT_OBJC_BRIDGING_HEADER = "old-China-photos/lens-of-china-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		4B368C0D1CC86C3700978B13 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B713AA0E69108693E398B292 /* Pods-lens-of-china.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				INFOPLIST_FILE = "old-China-photos/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.crossroads.old-China-photos";
 				PRODUCT_NAME = "lens-of-china";
+				SWIFT_OBJC_BRIDGING_HEADER = "old-China-photos/lens-of-china-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

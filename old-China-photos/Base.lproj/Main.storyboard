@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -10,21 +10,21 @@
         <!--Canton-->
         <scene sceneID="2Od-zM-GoG">
             <objects>
-                <collectionViewController id="a2v-wY-CPf" customClass="RecordCollectionViewController" customModule="ChristianAcuna" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="a2v-wY-CPf" customClass="RecordCollectionViewController" customModule="lens_of_china" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="hU1-nf-67i">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.15294117647058825" green="0.14901960784313725" blue="0.14509803921568626" alpha="1" colorSpace="calibratedRGB"/>
-                        <collectionViewLayout key="collectionViewLayout" id="jqo-tM-a7y" customClass="RecordLayout" customModule="ChristianAcuna" customModuleProvider="target"/>
+                        <collectionViewLayout key="collectionViewLayout" id="jqo-tM-a7y" customClass="RecordLayout" customModule="lens_of_china" customModuleProvider="target"/>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="ihI-rS-cwm" customClass="RecordCollectionViewCell" customModule="ChristianAcuna" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="ihI-rS-cwm" customClass="RecordCollectionViewCell" customModule="lens_of_china" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="64" width="200" height="260"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="200" height="260"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JdQ-kE-cff" customClass="RoundedCornersView" customModule="ChristianAcuna" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JdQ-kE-cff" customClass="RoundedCornersView" customModule="lens_of_china" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yBi-FU-CeY">
@@ -151,7 +151,7 @@
         <!--Record View Controller-->
         <scene sceneID="hyu-Sb-iOz">
             <objects>
-                <viewController id="ZlY-3m-kmg" customClass="RecordViewController" customModule="ChristianAcuna" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ZlY-3m-kmg" customClass="RecordViewController" customModule="lens_of_china" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="D5S-gI-I6x"/>
                         <viewControllerLayoutGuide type="bottom" id="alM-1u-Nnn"/>
@@ -180,7 +180,7 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </mapView>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RecordCell" rowHeight="36" id="Zv0-Oh-Fcc" customClass="RecordDetailTableViewCell" customModule="ChristianAcuna" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RecordCell" rowHeight="36" id="Zv0-Oh-Fcc" customClass="RecordDetailTableViewCell" customModule="lens_of_china" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="378" width="600" height="36"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zv0-Oh-Fcc" id="Iyy-gR-f17">
@@ -253,7 +253,7 @@
         <!--Detail Record View Controller-->
         <scene sceneID="cQ0-hi-vs8">
             <objects>
-                <viewController id="Uch-1j-a47" customClass="DetailRecordViewController" customModule="ChristianAcuna" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Uch-1j-a47" customClass="DetailRecordViewController" customModule="lens_of_china" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JH2-fw-Szx"/>
                         <viewControllerLayoutGuide type="bottom" id="BrA-h7-iSq"/>
@@ -369,7 +369,7 @@
         <!--Map-->
         <scene sceneID="idN-x4-ygQ">
             <objects>
-                <viewController id="IKG-OB-8Id" customClass="MapViewController" customModule="ChristianAcuna" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="IKG-OB-8Id" customClass="MapViewController" customModule="lens_of_china" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QA4-9S-vWS"/>
                         <viewControllerLayoutGuide type="bottom" id="XxR-PN-Kyd"/>
@@ -423,14 +423,14 @@
         <!--Cities-->
         <scene sceneID="sCP-mB-5ew">
             <objects>
-                <collectionViewController id="Y2Z-dg-bv3" customClass="CityCollectionViewController" customModule="ChristianAcuna" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="Y2Z-dg-bv3" customClass="CityCollectionViewController" customModule="lens_of_china" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="C6b-k1-xQr">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.1764705882" green="0.1843137255" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                        <collectionViewLayout key="collectionViewLayout" id="IMF-Uh-uaV" customClass="CityLayout" customModule="ChristianAcuna" customModuleProvider="target"/>
+                        <collectionViewLayout key="collectionViewLayout" id="IMF-Uh-uaV" customClass="CityLayout" customModule="lens_of_china" customModuleProvider="target"/>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CityCell" id="sck-0Y-mb0" customClass="CityCell" customModule="ChristianAcuna" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CityCell" id="sck-0Y-mb0" customClass="CityCell" customModule="lens_of_china" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
